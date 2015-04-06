@@ -1,0 +1,58 @@
+{
+	"name": "coolrussia",
+	"description": "Yii2-Start it's a small Yii 2 application template for your fast project start.",
+	"keywords": ["yii2", "yii 2", "application", "start", "bootstrap", "coolrussia"],
+	"homepage": "http://coolrussia.ru",
+	"type": "project",
+    "license": "BSD-3-Clause",
+    "support": {
+        "issues": "https://github.com/vova07/yii2-start/issues?q=is%3Aopen",
+        "forum": "http://yiiframework.ru/forum/viewtopic.php?f=28&t=16414",
+        "source": "https://coolrussia.ru"
+    },
+    "authors": [
+        {
+            "name": "SZ",
+            "email": "dev@coolrussia.ru"
+        }
+    ],
+	"minimum-stability": "stable",
+	"require": {
+		"php": ">=5.4.0",
+		"yiisoft/yii2": "*",
+		"yiisoft/yii2-bootstrap": "*",
+        "yiisoft/yii2-authclient": "*",
+        "vova07/yii2-start-base": "*",
+        "vova07/yii2-start-themes": "*",
+        "vova07/yii2-start-admin-module": "*",
+        "vova07/yii2-start-site-module": "*",
+        "vova07/yii2-start-blogs-module": "*",
+        "vova07/yii2-start-comments-module": "*",
+	    "kartik-v/yii2-editable": "dev-master",
+        "kartik-v/bootstrap-checkbox-x": "dev-master",
+        "kartik-v/yii2-checkbox-x": "dev-master",
+        "kartik-v/yii2-widget-select2": "dev-master",
+        "kartik-v/yii2-widget-datepicker": "dev-master",
+	    "kartik-v/yii2-grid": "v2.9.0",
+        "kartik-v/yii2-mpdf": "1.0.0.x-dev",
+        "kartik-v/yii2-widget-touchspin": "*",
+        "kartik-v/yii2-widget-timepicker": "*",
+        "kartik-v/yii2-widget-depdrop": "dev-master",
+	    "willdurand/geocoder": "~2.8",
+        "kop/yii2-conditional-validator": "dev-master",
+		"zelenin/yii2-i18n-module": "dev-master"
+    },
+    "require-dev": {
+    	"yiisoft/yii2-debug": "*",
+    	"yiisoft/yii2-gii": "*"
+    },
+    "config": {
+        "process-timeout": 1800
+    },
+    "extra": {
+        "asset-installer-paths": {
+            "npm-asset-library": "vendor/npm",
+            "bower-asset-library": "vendor/bower"
+        }
+    }
+}
