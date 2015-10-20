@@ -12,7 +12,7 @@
  */
 
 use modules\themes\admin\widgets\Box;
-use modules\blog\Module;
+use modules\rbac\Module;
 
 $this->title = Module::t('rbac', 'BACKEND_ROLES_CREATE_TITLE');
 $this->params['subtitle'] = Module::t('rbac', 'BACKEND_ROLES_CREATE_SUBTITLE');

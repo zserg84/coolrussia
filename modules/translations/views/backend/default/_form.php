@@ -4,9 +4,21 @@ use yii\helpers\Html;
 use modules\translations\Module;
 use modules\translations\models\Message;
 use modules\lang\models\Lang;
+use modules\translations\models\MessageCategory;
+use yii\helpers\ArrayHelper;
 
 $form = ActiveForm::begin(); ?>
 <?php $box->beginBody(); ?>
+    <div class="row">
+        <div class="col-sm-12">
+            <?=$form->field($model, 'category_id')->dropDownList(ArrayHelper::map(MessageCategory::find()->all(), 'id', 'name'))?>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <?=$form->field($model, 'message')?>
+        </div>
+    </div>
     <div class="row">
         <?
         $languages = Lang::find()->all();

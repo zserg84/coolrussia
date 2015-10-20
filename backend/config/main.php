@@ -4,7 +4,6 @@ Yii::setAlias('backend', dirname(__DIR__));
 
 return [
     'id' => 'app-backend',
-    'name' => 'CoolRussia',
     'basePath' => dirname(__DIR__),
     'defaultRoute' => 'admin/default/index',
     'modules' => [
@@ -13,37 +12,33 @@ return [
         ],
         'users' => [
             'controllerNamespace' => 'modules\users\controllers\backend',
+            'interfaceType' => 'backend',
         ],
         'lang' => [
             'controllerNamespace' => 'modules\lang\controllers\backend',
-            'isBackend' => true,
-        ],
-        'blogs' => [
-            'controllerNamespace' => 'modules\blog\controllers\backend'
-        ],
-        'comments' => [
-            'isBackend' => true
+            'interfaceType' => 'backend',
         ],
         'rbac' => [
-            'class' => 'vova07\rbac\Module',
-            'isBackend' => true
+            'class' => 'modules\rbac\Module',
+            'interfaceType' => 'backend',
+        ],
+        'page' => [
+            'controllerNamespace' => 'modules\page\controllers\backend',
+            'interfaceType' => 'backend',
         ],
         'translations' => [
             'class' => modules\translations\Module::className(),
             'controllerNamespace' => 'modules\translations\controllers\backend',
-            'isBackend' => true,
+            'interfaceType' => 'backend',
         ],
-        'faq' => [
-            'controllerNamespace' => 'modules\faq\controllers\backend',
-            'isBackend' => true,
+        'direction' => [
+            'controllerNamespace' => 'modules\direction\controllers\backend',
+            'interfaceType' => 'backend',
         ],
-        'page' => [
-            'controllerNamespace' => 'modules\page\controllers\backend',
-            'isBackend' => true,
-        ],
-        'geo' => [
-            'controllerNamespace' => 'modules\geo\controllers\backend',
-            'isBackend' => true,
+        'exchange' => [
+            'class' => 'modules\exchange\Module',
+            'controllerNamespace' => 'modules\exchange\controllers\backend',
+            'interfaceType' => 'backend',
         ],
     ],
     'components' => [

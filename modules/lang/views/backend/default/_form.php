@@ -10,7 +10,7 @@
  * @var array $statusArray Statuses array
  */
 
-use modules\blog\Module;
+use modules\lang\Module;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\widgets\ActiveForm;

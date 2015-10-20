@@ -11,7 +11,7 @@
  */
 
 use modules\themes\admin\widgets\Box;
-use modules\blog\Module;
+use modules\rbac\Module;
 
 $this->title = Module::t('rbac', 'BACKEND_PERMISSIONS_UPDATE_TITLE');
 $this->params['subtitle'] = Module::t('rbac', 'BACKEND_PERMISSIONS_UPDATE_SUBTITLE');

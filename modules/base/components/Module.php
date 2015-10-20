@@ -5,6 +5,7 @@ namespace modules\base\components;
 use modules\translations\components\DbMessageSource;
 use Yii;
 use yii\base\InvalidConfigException;
+use yii\helpers\VarDumper;
 
 /**
  * Base module.
@@ -14,7 +15,7 @@ class Module extends \yii\base\Module
     /**
      * @var boolean Whether module is used for backend or not
      */
-    public $isBackend = false;
+    public $interfaceType = 'guest';
 
     /**
      * @var string|null Module name
@@ -45,12 +46,25 @@ class Module extends \yii\base\Module
             throw new InvalidConfigException('The "name" property must be set.');
         }
 
-        if ($this->isBackend === true) {
+        if ($this->interfaceType === 'backend') {
             $this->setViewPath('@' . static::$author . '/' . static::$name . '/views/backend');
             if ($this->controllerNamespace === null) {
                 $this->controllerNamespace = static::$author . '\\' . static::$name . '\controllers\backend';
             }
-        } else {
+        }
+        elseif($this->interfaceType === 'customer'){
+            $this->setViewPath('@' . static::$author . '/' . static::$name . '/views/customer');
+            if ($this->controllerNamespace === null) {
+                $this->controllerNamespace = static::$author . '\\' . static::$name . '\controllers\customer';
+            }
+        }
+        elseif($this->interfaceType === 'performer'){
+            $this->setViewPath('@' . static::$author . '/' . static::$name . '/views/performer');
+            if ($this->controllerNamespace === null) {
+                $this->controllerNamespace = static::$author . '\\' . static::$name . '\controllers\performer';
+            }
+        }
+        else {
             $this->setViewPath('@' . static::$author . '/' . static::$name . '/views/frontend');
             if ($this->controllerNamespace === null) {
                 $this->controllerNamespace = static::$author . '\\' . static::$name . '\controllers\frontend';
@@ -64,7 +78,7 @@ class Module extends \yii\base\Module
 
     public static function initLang(){
         $app = \Yii::$app;
-        static::$langNames = static::$langNames ? static::$langNames : [static::$name, static::$name . 'lang'];
+        static::$langNames = static::$langNames ? static::$langNames : [static::$name];
         foreach(static::$langNames as $langName){
             if (!isset($app->i18n->translations[$langName])) {
                 $app->i18n->translations[$langName] = [

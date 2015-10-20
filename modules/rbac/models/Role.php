@@ -266,7 +266,7 @@ class Role extends Model
         $auth = Yii::$app->authManager;
         $role = $auth->createRole($this->name);
         $role->description = $this->description;
-        $role->ruleName = $this->ruleName;
+        $role->ruleName = $this->ruleName ? $this->ruleName : null;
         $role->data = $this->data;
 
         if ($auth->add($role)) {
@@ -291,7 +291,7 @@ class Role extends Model
         $auth = Yii::$app->authManager;
         $role = $auth->createRole($this->name);
         $role->description = $this->description;
-        $role->ruleName = $this->ruleName;
+        $role->ruleName = $this->ruleName ? $this->ruleName : null;
         $role->data = $this->data;
 
         if ($auth->update($this->name, $role)) {

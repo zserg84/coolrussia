@@ -6,6 +6,7 @@ use Geocoder\Exception\HttpException;
 use modules\users\models\frontend\Email;
 use modules\users\models\User;
 use modules\users\Module;
+use yii\captcha\CaptchaAction;
 use yii\helpers\Url;
 use yii\web\Controller;
 use Yii;
@@ -15,6 +16,7 @@ use Yii;
  */
 class DefaultController extends Controller
 {
+
     /**
      * Confirm new e-mail address.
      *

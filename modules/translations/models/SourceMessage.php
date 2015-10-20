@@ -36,7 +36,8 @@ class SourceMessage extends ActiveRecord
     public function rules()
     {
         return [
-            ['message', 'string']
+            ['message', 'string'],
+            [['message', 'category_id'], 'required']
         ];
     }
 
@@ -46,10 +47,10 @@ class SourceMessage extends ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => Module::t('translations', 'ID'),
-            'category_id' => Module::t('translations', 'CATEGORY'),
-            'message' => Module::t('translations', 'MESSAGE'),
-            'status' => Module::t('translations', 'STATUS')
+//            'id' => Module::t('translations', 'ID'),
+//            'category_id' => Module::t('translations', 'CATEGORY'),
+//            'message' => Module::t('translations', 'MESSAGE'),
+//            'status' => Module::t('translations', 'STATUS')
         ];
     }
 

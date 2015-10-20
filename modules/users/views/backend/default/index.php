@@ -113,18 +113,18 @@ $gridConfig = [
 $boxButtons = $actions = [];
 $showActions = false;
 
-if (Yii::$app->user->can('BCreateUsers')) {
+/*if (Yii::$app->user->can('BCreateUsers')) {
     $boxButtons[] = '{create}';
-}
+}*/
 if (Yii::$app->user->can('BUpdateUsers')) {
     $actions[] = '{update}';
     $showActions = $showActions || true;
 }
-if (Yii::$app->user->can('BDeleteUsers')) {
+/*if (Yii::$app->user->can('BDeleteUsers')) {
     $boxButtons[] = '{batch-delete}';
     $actions[] = '{delete}';
     $showActions = $showActions || true;
-}
+}*/
 
 if ($showActions === true) {
     $gridConfig['columns'][] = [

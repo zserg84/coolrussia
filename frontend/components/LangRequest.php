@@ -9,6 +9,8 @@
 namespace frontend\components;
 
 use Yii;
+use yii\helpers\Url;
+use yii\helpers\VarDumper;
 use yii\web\Request;
 use modules\lang\models\Lang;
 
@@ -21,17 +23,44 @@ class LangRequest extends Request
         if ($this->_lang_url === null) {
             $this->_lang_url = $this->getUrl();
 
-            $url_list = explode('/', $this->_lang_url);
+            $url = explode('?', $this->_lang_url);
+            $params = isset($url[1]) ? $url[1] : null;
+            if($params){
+                $params = explode('&', $params);
+                foreach($params as $k=>$par){
+                    if(strpos($par, 'lang=') !== false){
+                        unset($params[$k]);
+                    }
+                }
+                $params = implode('&', $params);
+            }
 
-            $lang_url = isset($url_list[1]) ? $url_list[1] : null;
+            $url = $url[0];
+//            $params = Yii::$app->getRequest()->get();
+//            if(isset($params['lang']))
+//                unset($params['lang']);
+            $this->_lang_url = $url;
+                /*$url_list = explode('/', $this->_lang_url);
 
-            Lang::setCurrent($lang_url);
+                $lang_url = isset($url_list[1]) ? $url_list[1] : null;
+    */
+            $lang = Yii::$app->getRequest()->get('lang');
+            Lang::setCurrent($lang);
 
-            if( $lang_url !== null && $lang_url === Lang::getCurrent()->url &&
+            if( $lang !== null && $lang === Lang::getCurrent()->url &&
                 strpos($this->_lang_url, Lang::getCurrent()->url) === 1 )
             {
                 $this->_lang_url = substr($this->_lang_url, strlen(Lang::getCurrent()->url)+1);
             }
+
+            $this->_lang_url .= '?'.$params;
+/*
+            $paramStr = '';
+            foreach($params as $key=>$value){
+                $paramStr .= $paramStr ? '&' : '?';
+                $paramStr .= $key .'='.$value;
+            }
+            $this->_lang_url .= $paramStr;*/
         }
 
         return $this->_lang_url;

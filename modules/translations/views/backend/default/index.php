@@ -11,7 +11,9 @@ use modules\themes\admin\widgets\Box;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
 use yii\web\View;
+use kartik\grid\ActionColumn;
 use yii\widgets\Pjax;
+use modules\themes\Module as ThemeModule;
 use modules\translations\models\search\SourceMessageSearch;
 use modules\translations\Module;
 use modules\translations\models\MessageCategory;
@@ -76,8 +78,42 @@ $gridConfig = [
 //            ]
     ]
 ];
-$boxButtons = [];
-?>
+$boxButtons = $actions = [];
+$showActions = false;
+
+if (Yii::$app->user->can('BCreateTranslation')) {
+    $boxButtons[] = '{create}';
+}
+if (Yii::$app->user->can('BUpdateTranslation')) {
+    $actions[] = '{update}';
+    $showActions = $showActions || true;
+}
+$gridButtons = [];
+if (Yii::$app->user->can('BDeleteTranslation')) {
+    $boxButtons[] = '{batch-delete}';
+//    $actions[] = '{delete}';
+    $actions[] = '{delete}';
+    $gridButtons['delete'] = function ($url, $model) {
+        return Html::a('<span class="glyphicon glyphicon-trash"></span>', ['delete', 'id' => $model->id],
+            [
+                'class' => 'grid-action',
+                'data' => [
+                    'confirm' => ThemeModule::t('themes-admin','Are you sure you want to delete this item?'),
+                    'method' => 'post',
+                    'pjax' => '0',
+                ],
+            ]);
+    };
+    $showActions = $showActions || true;
+}
+if ($showActions === true) {
+    $gridConfig['columns'][] = [
+        'class' => ActionColumn::className(),
+        'template' => implode(' ', $actions),
+        'buttons'=>$gridButtons,
+    ];
+}
+$boxButtons = !empty($boxButtons) ? implode(' ', $boxButtons) : null; ?>
 <div class="row">
     <div class="col-xs-12">
         <?php Box::begin(
@@ -86,7 +122,7 @@ $boxButtons = [];
                 'bodyOptions' => [
                     'class' => 'table-responsive'
                 ],
-//                'buttonsTemplate' => $boxButtons,
+                'buttonsTemplate' => $boxButtons,
                 'grid' => $gridId
             ]
         ); ?>

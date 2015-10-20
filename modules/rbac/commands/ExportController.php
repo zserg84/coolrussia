@@ -1,10 +1,14 @@
 <?php
 namespace modules\rbac\commands;
 
+use modules\rbac\models\AuthAssignment;
+use modules\rbac\models\AuthItem;
+use modules\rbac\models\AuthItemChild;
 use Yii;
 use yii\console\Controller;
 use modules\users\models\User;
 use modules\rbac\rules\AuthorRule;
+use yii\rbac\Assignment;
 
 class ExportController extends Controller {
 

@@ -15,9 +15,12 @@ class LangWidget extends Widget
     public function init(){}
 
     public function run() {
+        $curLang = Lang::getCurrent();
         return $this->render('view', [
             'current' => Lang::getCurrent(),
-            'langs' => Lang::find()->where('id != :current_id', [':current_id' => Lang::getCurrent()->id])->all(),
+//            'langs' => Lang::find()->where('id != :current_id', [':current_id' => Lang::getCurrent()->id])->all(),
+            'langs' => Lang::find()->all(),
+            'curLang' => $curLang,
         ]);
     }
 }

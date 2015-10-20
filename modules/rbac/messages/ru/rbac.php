@@ -49,7 +49,7 @@ return [
     'BACKEND_ROLES_FLASH_FAIL_ADMIN_DELETE' => 'Не удалось удалить роль. Попробуйте пожалуйста еще раз!',
     'BACKEND_ROLES_FLASH_FAIL_ADMIN_UPDATE' => 'Не удалось обновить роль. Попробуйте пожалуйста еще раз!',
     'BACKEND_ROLES_INDEX_SUBTITLE' => 'Список ролей',
-    'BACKEND_ROLES_INDEX_TITLE' => 'Управление дсотупом',
+    'BACKEND_ROLES_INDEX_TITLE' => 'Управление доступом',
     'BACKEND_ROLES_NOT_FOUND' => 'Ошибка 404 - страница не найдена!',
     'BACKEND_ROLES_PERMISSIONS_PROMPT' => 'Выберите права',
     'BACKEND_ROLES_ROLES_PROMPT' => 'Выберите роли',

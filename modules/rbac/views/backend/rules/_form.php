@@ -9,7 +9,7 @@
  * @var \modules\themes\admin\widgets\Box $box Box widget instance
  */
 
-use modules\blog\Module;
+use modules\rbac\Module;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 

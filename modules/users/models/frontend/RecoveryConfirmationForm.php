@@ -5,6 +5,7 @@ namespace modules\users\models\frontend;
 use modules\users\helpers\Security;
 use modules\users\models\User;
 use modules\users\Module;
+use modules\themes\Module as ThemeModule;
 use modules\users\traits\ModuleTrait;
 use yii\base\Model;
 use Yii;
@@ -75,8 +76,8 @@ class RecoveryConfirmationForm extends Model
     public function attributeLabels()
     {
         return [
-            'password' => Module::t('users', 'ATTR_PASSWORD'),
-            'repassword' => Module::t('users', 'ATTR_REPASSWORD')
+            'password' => ThemeModule::t('Login form for ALL pages', 'PASSWORD_LOGIN_FORM_ALL_PAGES'),
+            'repassword' => ThemeModule::t('Login form for ALL pages', 'REPASSWORD_LOGIN_FORM_ALL_PAGES')
         ];
     }
 
@@ -105,5 +106,10 @@ class RecoveryConfirmationForm extends Model
             return $model->recovery($this->password);
         }
         return false;
+    }
+
+    public function login()
+    {
+        return Yii::$app->user->login($this->_user, 0);
     }
 }

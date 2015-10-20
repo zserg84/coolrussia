@@ -230,7 +230,7 @@ class Permission extends Model
         $auth = Yii::$app->authManager;
         $permission = $auth->createPermission($this->name);
         $permission->description = $this->description;
-        $permission->ruleName = $this->ruleName;
+        $permission->ruleName = $this->ruleName ? $this->ruleName : null;
         $permission->data = $this->data;
 
         if ($auth->add($permission)) {
@@ -250,7 +250,7 @@ class Permission extends Model
         $auth = Yii::$app->authManager;
         $permission = $auth->createPermission($this->name);
         $permission->description = $this->description;
-        $permission->ruleName = $this->ruleName;
+        $permission->ruleName = $this->ruleName ? $this->ruleName : null;
         $permission->data = $this->data;
 
         if ($auth->update($this->name, $permission)) {

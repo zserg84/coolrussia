@@ -4,12 +4,12 @@ use yii\grid\CheckboxColumn;
 use yii\jui\DatePicker;
 use yii\grid\ActionColumn;
 use modules\themes\admin\widgets\Box;
-use modules\lang\Module;
+use modules\lang\Module as LangModule;
 use modules\themes\admin\widgets\GridView;
 use modules\themes\Module as ThemeModule;
 
-$this->title = Module::t('lang', 'BACKEND_INDEX_TITLE');
-$this->params['subtitle'] = Module::t('lang', 'BACKEND_INDEX_SUBTITLE');
+$this->title = LangModule::t('lang', 'BACKEND_INDEX_TITLE');
+$this->params['subtitle'] = LangModule::t('lang', 'BACKEND_INDEX_SUBTITLE');
 $this->params['breadcrumbs'] = [
     $this->title
 ];

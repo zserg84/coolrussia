@@ -16,9 +16,6 @@ $this->params['breadcrumbs'][] = $this->title;
 if ($user->image_id) {
     echo Html::img($user->image->getSrc());
 }
-if ($user->city_id) {
-    echo '<br />'.$user->city->getName(true, true);
-}
 if ($user->birthday) {
     $date = new DateTime($user->birthday);
     echo '<br />'.$date->format('d.m.Y');

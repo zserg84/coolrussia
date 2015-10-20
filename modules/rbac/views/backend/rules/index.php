@@ -9,7 +9,7 @@
 
 use modules\themes\admin\widgets\Box;
 use modules\themes\admin\widgets\GridView;
-use modules\blog\Module;
+use modules\rbac\Module;
 use yii\grid\ActionColumn;
 use yii\grid\CheckboxColumn;
 

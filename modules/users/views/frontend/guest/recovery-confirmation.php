@@ -5,14 +5,23 @@
  *
  * @var \yii\web\View $this View
  * @var \yii\widgets\ActiveForm $form Form
- * @var \v\users\models\frontend\RecoveryConfirmationForm $model Model
+ * @var \modules\users\models\frontend\RecoveryConfirmationForm $model Model
  */
 
-use modules\users\Module;
+use modules\themes\Module as ThemeModule;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use common\components\Modal;
 
-$this->title = Module::t('users', 'FRONTEND_RECOVERY_CONFIRMATION_TITLE');
+Modal::begin([
+    'id' => 'recovery-confirmation-modal',
+    'header' => '<p class="title">Изменение пароля</p>',
+    'clientOptions' => false,
+    'options' => [
+        'class' => 'modal-recovery-confirmation modal-small',
+    ],
+]);
+$this->title = ThemeModule::t('GUEST_INTERFACE', 'FRONTEND_RECOVERY_SUBMIT');
 $this->params['breadcrumbs'] = [
     $this->title
 ];
@@ -24,15 +33,30 @@ $this->params['contentId'] = 'error'; ?>
         ]
     ]
 ); ?>
-    <fieldset class="registration-form">
-        <?= $form->field($model, 'password')->passwordInput(['placeholder' => $model->getAttributeLabel('password')])->label(false) ?>
-        <?= $form->field($model, 'repassword')->passwordInput(['placeholder' => $model->getAttributeLabel('repassword')])->label(false) ?>
-        <?= $form->field($model, 'token', ['template' => "{input}\n{error}"])->hiddenInput() ?>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <?= $form->field($model, 'password')->passwordInput(['placeholder' => $model->getAttributeLabel('password')])->label(false)->error(false) ?>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <?= $form->field($model, 'repassword')->passwordInput(['placeholder' => $model->getAttributeLabel('repassword')])->label(false)->error(false) ?>
+            <?= $form->field($model, 'token', ['template' => "{input}\n{error}"])->hiddenInput() ?>
+        </div>
+    </div>
+    <div class="row">
         <?= Html::submitButton(
-            Module::t('users', 'FRONTEND_RECOVERY_CONFIRMATION_SUBMIT'),
+            ThemeModule::t('GUEST_INTERFACE', 'FRONTEND_RECOVERY_SUBMIT'),
             [
                 'class' => 'btn btn-success pull-right'
             ]
         ) ?>
-    </fieldset>
-<?php ActiveForm::end(); ?>
+    </div>
+
+<?php
+ActiveForm::end();
+Modal::end();
+
+$this->registerJs('
+    $("#recovery-confirmation-modal").modal();
+');

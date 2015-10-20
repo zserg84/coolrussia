@@ -27,12 +27,12 @@ $this->params['breadcrumbs'] = [
 $boxButtons = ['{cancel}'];
 
 
-if (Yii::$app->user->can('BCreateUsers')) {
+/*if (Yii::$app->user->can('BCreateUsers')) {
     $boxButtons[] = '{create}';
-}
-if (Yii::$app->user->can('BDeleteUsers')) {
+}*/
+/*if (Yii::$app->user->can('BDeleteUsers')) {
     $boxButtons[] = '{delete}';
-}
+}*/
 
 if ($user->id !== Yii::$app->getUser()->getId()) {
     //if (Yii::$app->user->can('BLoginAs')) {

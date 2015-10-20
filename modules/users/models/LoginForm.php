@@ -3,6 +3,7 @@
 namespace modules\users\models;
 
 use modules\users\Module;
+use modules\themes\Module as ThemeModule;
 use modules\users\traits\ModuleTrait;
 use Yii;
 use yii\base\Model;
@@ -90,8 +91,9 @@ class LoginForm extends Model
     {
         if ($this->_user === false) {
             $user = User::findByEmail($this->email, 'active');
+            $user = $user ? $user : User::findByLogin($this->email, 'active');
             if ($user !== null) {
-                if ($this->module->isBackend) {
+                if ($this->module->interfaceType == 'backend') {
                     if (Yii::$app->authManager->checkAccess($user->id, 'accessBackend')) {
                         $this->_user = $user;
                     }

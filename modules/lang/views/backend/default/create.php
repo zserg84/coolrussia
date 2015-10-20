@@ -9,7 +9,7 @@
  */
 
 use modules\themes\admin\widgets\Box;
-use modules\blog\Module;
+use modules\lang\Module;
 
 $this->title = Module::t('lang', 'BACKEND_CREATE_TITLE');
 $this->params['subtitle'] = Module::t('lang', 'BACKEND_CREATE_SUBTITLE');

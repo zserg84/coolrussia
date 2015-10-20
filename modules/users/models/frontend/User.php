@@ -14,11 +14,11 @@
 
 namespace modules\users\models\frontend;
 
-use modules\geo\models\GeoCity;
-use modules\geo\models\GeoCountry;
+use modules\image\models\Image;
 use modules\users\Module;
 use Yii;
 use kop\y2cv\ConditionalValidator;
+use yii\helpers\VarDumper;
 
 class User extends \modules\users\models\User
 {
@@ -34,20 +34,13 @@ class User extends \modules\users\models\User
 
     public $country_id;
 
-    public $city_name;
-
-    public $use_password = 0;
-
-    public $use_avatar = 0;
+    public $logo;
 
     private $_src_password = false;
 
 
     public function afterFind() {
         parent::afterFind();
-        if ($this->city_id) {
-            $this->city_name = $this->city->getName();
-        }
     }
 
 
@@ -57,28 +50,15 @@ class User extends \modules\users\models\User
     public function rules()
     {
         return [
-            [['name', 'email'], 'required'],
-            [['name', 'email', 'password', 'repassword', 'city_name'], 'trim'],
+            [['email', 'login'], 'required'],
+            [['name', 'email', 'password', 'repassword'], 'trim'],
             ['email', 'email'],
-            [['email'], 'unique'],
+            [['email', 'login'], 'unique'],
             ['birthday', 'birthdayValidate'],
-            [['country_id, city_id'], 'integer'],
-            ['country_id', 'exist', 'targetClass'=>GeoCountry::className(), 'targetAttribute'=>'id'],
             [['password', 'repassword'], 'string', 'min' => 6, 'max' => 30],
-            ['name', 'match', 'pattern' => Module::getInstance()->patternName],
-            ['name', 'string', 'min' => 2, 'max' => 64],
+            [['name', 'login'], 'string', 'min' => 2, 'max' => 64],
             ['email', 'string', 'max' => 100],
-            ['city_id', 'cityValidate', 'on'=>'signup'],
-//            ['repassword', 'compare', 'compareAttribute' => 'password'],
-            ['password', 'passwordValidate'],
-            ['repassword', ConditionalValidator::className(),
-                'if' => [
-                    ['use_password', 'compare', 'compareValue' => 1]
-                ],
-                'then' => [
-                    ['repassword', 'compare', 'compareAttribute' => 'password'],
-                ]
-            ],
+            ['repassword', 'compare', 'compareAttribute' => 'password'],
         ];
     }
 
@@ -89,24 +69,14 @@ class User extends \modules\users\models\User
         }
     }
 
-    public function passwordValidate() {
-        if (!$this->use_password or (!$this->password and !$this->repassword)) {
-            $this->_src_password = $this->password = $this->repassword = Yii::$app->security->generateRandomString(10);
-        }
-    }
-
-    public function cityValidate() {
-        $this->city_id = GeoCity::GetOrCreate($this->city_id, $this->country_id, $this->city_name);
-    }
-
     /**
      * @inheritdoc
      */
     public function scenarios()
     {
-        return [
-            'signup' => ['name', 'email', 'password', 'repassword', 'birthday', 'city_id', 'city_name', 'country_id', 'use_avatar', 'use_password', 'image_id'],
-        ];
+        $scenarios = parent::scenarios();
+        $scenarios['signup'] = ['name', 'email', 'password', 'repassword', 'country_id', 'state_id', 'city_id', 'image_id', 'login'];
+        return $scenarios;
     }
 
     /**
@@ -119,8 +89,6 @@ class User extends \modules\users\models\User
         return array_merge($labels, [
             'password' => Module::t('users', 'ATTR_PASSWORD'),
             'repassword' => Module::t('users', 'ATTR_REPASSWORD'),
-            'city_name' => Module::t('users', 'ATTR_CITY_NAME'),
-            'country_id' => Module::t('users', 'ATTR_COUNTRY'),
         ]);
     }
 
@@ -132,7 +100,6 @@ class User extends \modules\users\models\User
         if (parent::beforeSave($insert)) {
             if ($this->isNewRecord) {
                 $this->setPassword($this->password);
-                $this->status_id = self::STATUS_ACTIVE;
             }
             return true;
         }
@@ -147,12 +114,10 @@ class User extends \modules\users\models\User
         parent::afterSave($insert, $changedAttributes);
 
         if ($insert) {
-            if ($this->profile !== null) {
-                $this->profile->save(false);
-            }
-
             $auth = Yii::$app->authManager;
-            $role = $auth->getRole(self::ROLE_DEFAULT);
+            $roleName = $this->role ? $this->role : self::ROLE_DEFAULT;
+//            $roleName = self::ROLE_DEFAULT;
+            $role = $auth->getRole($roleName);
             $auth->assign($role, $this->id);
 
             if (Yii::$app->params['sendmail']) {
@@ -161,6 +126,12 @@ class User extends \modules\users\models\User
                 }
             }
 
+        }
+    }
+
+    public function passwordValidate() {
+        if (!$this->use_password or (!$this->password and !$this->repassword)) {
+            $this->_src_password = $this->password = $this->repassword = Yii::$app->security->generateRandomString(10);
         }
     }
 
@@ -178,6 +149,15 @@ class User extends \modules\users\models\User
                     ->send();
     }
 
+    public function saveLogo() {
+        if (is_null($this->logo)) return;
+        if (($tmpName = $this->logo->tempName) and ($ext = $this->logo->extension)) {
+            if ($image = Image::GetByFile($tmpName, $ext)) {
+                $this->image_id = $image->id;
+                $this->save();
+            }
+        }
+    }
 
     public function getSrcPassword() {
         return $this->_src_password;

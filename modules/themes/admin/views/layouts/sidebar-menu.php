@@ -27,39 +27,10 @@ echo Menu::widget(
                 'icon' => 'fa-group',
                 'visible' => Yii::$app->user->can('administrateUsers') || Yii::$app->user->can('BViewUsers'),
             ],
-            [
-                'label' => Module::t('themes-admin', 'Blogs'),
-                'url' => ['/blogs/default/index'],
-                'icon' => 'fa-book',
-                'visible' => Yii::$app->user->can('administrateBlogs') || Yii::$app->user->can('BViewBlogs'),
-            ],
-            [
-                'label' => Module::t('themes-admin', 'Faq'),
-                'url' => ['/faq/default/index'],
-                'icon' => 'fa-question-circle',
-            ],
-            [
+            /*[
                 'label' => Module::t('themes-admin', 'Static Pages'),
                 'url' => ['/page/default/index'],
                 'icon' => 'fa-square-o',
-            ],
-            /*[
-                'label' => Module::t('themes-admin', 'Comments'),
-                'url' => ['/comments/default/index'],
-                'icon' => 'fa-comments',
-                'visible' => Yii::$app->user->can('administrateComments') || Yii::$app->user->can('BViewCommentsModels') || Yii::$app->user->can('BViewComments'),
-                'items' => [
-                    [
-                        'label' => Module::t('themes-admin', 'Comments'),
-                        'url' => ['/comments/default/index'],
-                        'visible' => Yii::$app->user->can('administrateComments') || Yii::$app->user->can('BViewComments'),
-                    ],
-                    [
-                        'label' => Module::t('themes-admin', 'Models management'),
-                        'url' => ['/comments/models/index'],
-                        'visible' => Yii::$app->user->can('administrateComments') || Yii::$app->user->can('BViewCommentsModels'),
-                    ]
-                ]
             ],*/
             [
                 'label' => Module::t('themes-admin', 'Access control'),
@@ -102,24 +73,24 @@ echo Menu::widget(
                 ]
             ],
             [
-                'label' => Module::t('themes-admin', 'Geo'),
+                'label' => Module::t('themes-admin', 'Directions'),
+                'url' => ['/direction/default/index'],
+                'icon' => 'fa-arrow-up',
+                'visible' => Yii::$app->user->can('administrateUsers') || Yii::$app->user->can('BViewDirection'),
+            ],
+            [
+                'label' => 'Импорт/экспорт',
                 'url' => '#',
-                'icon' => 'fa-map-marker',
-                'visible' => Yii::$app->user->can('administrateUsers'),
+                'icon' => 'fa-arrows-h',
                 'items' => [
                     [
-                        'label' => Module::t('themes-admin', 'GeoCountry'),
-                        'url' => ['/geo/country/index'],
-                        'visible' => Yii::$app->user->can('administrateUsers'),
+                        'label' => 'Импорт',
+                        'url' => ['/exchange/default/import/'],
                     ],
                     [
-                        'label' => Module::t('themes-admin', 'GeoRegion'),
-                        'url' => ['/geo/region/index'],
-                    ],
-                    [
-                        'label' => Module::t('themes-admin', 'GeoCity'),
-                        'url' => ['/geo/city/index'],
-                    ],
+                        'label' => 'Экспорт',
+                        'url' => ['/exchange/default/export/'],
+                    ]
                 ]
             ],
         ]

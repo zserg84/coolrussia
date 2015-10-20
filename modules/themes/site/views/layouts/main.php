@@ -9,7 +9,7 @@
 
 use modules\themes\site\widgets\Alert;
 use yii\widgets\Breadcrumbs;
-use modules\themes\Module;
+use modules\themes\Module as ThemeModule;
 
 ?>
 <?php $this->beginPage(); ?>
@@ -25,7 +25,7 @@ use modules\themes\Module;
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only"><?= Module::t('themes-site', 'Toggle navigation') ?></span>
+                    <span class="sr-only"><?= ThemeModule::t('themes-site', 'Toggle navigation') ?></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -82,7 +82,7 @@ use modules\themes\Module;
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
-                    &copy; 2014 <?= Yii::$app->name ?>. <?= Module::t('themes-site', 'All Rights Reserved') ?>.
+                    &copy; 2014 <?= Yii::$app->name ?>. <?= ThemeModule::t('themes-site', 'All Rights Reserved') ?>.
                 </div>
                 <div class="col-sm-6">
                     <?= $this->render('//layouts/_footer_menu') ?>

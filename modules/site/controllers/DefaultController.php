@@ -29,11 +29,6 @@ class DefaultController extends Controller
                 'defaultView' => 'about',
                 'viewPrefix' => '',
             ],
-            'fororg' => [
-                'class' => ViewAction::className(),
-                'defaultView' => 'org',
-                'viewPrefix' => '',
-            ],
             'agreement' => [
                 'class' => ViewAction::className(),
                 'defaultView' => 'agreement',
@@ -41,10 +36,15 @@ class DefaultController extends Controller
             ],
             'captcha' => [
                 'class' => CaptchaAction::className(),
-                'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
-                'backColor' => 0XF5F5F5,
-                'height' => 34
+//                'fixedVerifyCode' => YII_ENV_TEST ? 'testme' : null,
+//                'backColor' => 0XF5F5F5,
+//                'height' => 34,
+                'backColor'=>0xE8E8E8, //цвет фона капчи
+//                'testLimit'=>2, //сколько раз капча не меняется
+                'transparent'=>false,
+                'foreColor'=>0x200000, //цвет символов
             ]
+
         ];
     }
 
@@ -53,9 +53,15 @@ class DefaultController extends Controller
      */
     public function actionIndex()
     {
-        $this->layout = '//home';
-
-        return $this->render('index');
+        if(Yii::$app->getUser()->isGuest){
+            return $this->redirect(['/signup/']);
+        }
+        elseif(Yii::$app->getUser()->role == 'superadmin'){
+            return $this->redirect(['/backend/']);
+        }
+        else{
+            return $this->redirect(['/'.Yii::$app->getUser()->role.'/contract/performer/list']);
+        }
     }
 
     /**

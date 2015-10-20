@@ -27,14 +27,14 @@ use yii\widgets\ActiveForm;
             <?= $form->field($user, 'email') ?>
         </div>
     </div>
-    <div class="row">
+    <!--<div class="row">
         <div class="col-sm-6">
-            <?= $form->field($user, 'password')->passwordInput() ?>
+            <?/*= $form->field($user, 'password')->passwordInput() */?>
         </div>
         <div class="col-sm-6">
-            <?= $form->field($user, 'repassword')->passwordInput() ?>
+            <?/*= $form->field($user, 'repassword')->passwordInput() */?>
         </div>
-    </div>
+    </div>-->
     <div class="row">
         <div class="col-sm-6">
             <?=

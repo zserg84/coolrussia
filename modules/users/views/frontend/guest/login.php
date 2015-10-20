@@ -24,7 +24,7 @@ $this->params['breadcrumbs'] = [
     ]
 ); ?>
     <fieldset class="registration-form">
-        <?= yii\authclient\widgets\AuthChoice::widget(['baseAuthUrl' => ['auth/index']]) ?>
+<!--        --><?//= yii\authclient\widgets\AuthChoice::widget(['baseAuthUrl' => ['auth/index']]) ?>
 
         <?= $form->field($model, 'email')->input('email', ['placeholder' => $model->getAttributeLabel('email')])->label(false) ?>
         <?= $form->field($model, 'password')->passwordInput(['placeholder' => $model->getAttributeLabel('password')])->label(false) ?>

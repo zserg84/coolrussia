@@ -2,7 +2,6 @@
 
 namespace modules\users\models\backend;
 
-use modules\users\models\Profile;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use Yii;
@@ -51,7 +50,7 @@ class UserSearch extends User
      */
     public function search($params)
     {
-        $query = self::find();//->joinWith(['profile']);
+        $query = self::find();
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,

@@ -8,7 +8,6 @@
  * @var \modules\users\models\frontend\User $user Model
  * @var \modules\users\models\Profile $profile Profile
  *
- * @var $geoCountryArr Array
  * @var $tmp_avatar string | null
  */
 
@@ -41,33 +40,6 @@ $this->params['breadcrumbs'] = [
         <?
         echo $form->field($user, 'name')->textInput(['placeholder' => $user->getAttributeLabel('name')])->label(false);
         echo $form->field($user, 'email')->input('email', ['placeholder' => $user->getAttributeLabel('email')])->label(false);
-
-        echo $form->field($user, 'country_id')->label(false)->dropDownList($geoCountryArr, ['id'=>'signup__geo_country']);
-
-        ?><div class="form-group field-user-name required"><?
-            echo $form->field($user, 'city_id')->label(false)->error(false)->hiddenInput(['id'=>'signup__geo_city_id']);
-            echo AutoComplete::widget([
-                'model' => $user,
-                'attribute' => 'city_name',
-                'clientOptions' => [
-                    'minLength' => 2,
-                    'source' => new JsExpression("function(request, response) {
-                        var __geo_suggest_url = '".Url::toRoute('/geo/suggest/city')."',
-                            __geo_country_id = $('#signup__geo_country').val();
-                        $.get(__geo_suggest_url, {country_id:__geo_country_id, q:request.term}, function(data) {
-                            response(data);
-                        }, 'JSON');
-                    }"),
-                    'select' => new JsExpression("function(event, ui) {
-                        $('#signup__geo_city_id').val(ui.item.id);
-                    }"),
-                ],
-                'options' => [
-                    'class'=>'form-control js_signup__geo_city',
-                    'placeholder'=>$user->getAttributeLabel('city_name'),
-                ],
-            ]);
-        ?></div><?
 
         if ($user->birthday) {
             echo DatePicker::widget([

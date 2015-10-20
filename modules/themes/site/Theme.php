@@ -15,7 +15,9 @@ class Theme extends \yii\base\Theme
      */
     public $pathMap = [
         '@frontend/views' => '@modules/themes/site/views',
-        '@frontend/modules' => '@modules/themes/site/modules'
+        '@frontend/modules' => '@modules/themes/site/modules',
+        '@customer/views' => '@modules/themes/site/views',
+        '@customer/modules' => '@modules/themes/site/modules'
     ];
 
     /**
@@ -34,7 +36,7 @@ class Theme extends \yii\base\Theme
         Yii::$app->assetManager->bundles['yii\bootstrap\BootstrapPluginAsset'] = [
             'sourcePath' => '@modules/themes/site/assets',
             'js' => [
-                'js/bootstrap.min.js'
+                'js/bootstrap.min.js',
             ]
         ];
     }

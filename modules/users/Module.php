@@ -90,16 +90,12 @@ class Module extends \yii\base\Module
      */
     public $patternSurname = '/^[a-zа-яё]+(-[a-zа-яё]+)?$/iu';
 
-    /**
-     * @var boolean Is module used for backend.
-     */
-    private $_isBackend;
+    public $interfaceType = 'guest';
 
     /**
      * @var \yii\swiftmailer\Mailer Mailer instance
      */
     private $_mail;
-
 
     /**
      * @inheritdoc
@@ -109,30 +105,34 @@ class Module extends \yii\base\Module
         parent::init();
 
         $app = \Yii::$app;
-        if (!isset($app->i18n->translations['users'])) {
-            $app->i18n->translations['users'] = [
-                'class' => DbMessageSource::className(),
-                'forceTranslation' => true,
-            ];
-        }
 
-        if ($this->isBackend === true) {
+        self::initLang();
+
+        if ($this->interfaceType === 'backend') {
             $this->setViewPath('@modules/users/views/backend');
-        } else {
+        }
+        elseif ($this->interfaceType === 'customer') {
+            $this->setViewPath('@modules/users/views/customer');
+        }
+        elseif ($this->interfaceType === 'performer') {
+            $this->setViewPath('@modules/users/views/performer');
+        }
+        else {
             $this->setViewPath('@modules/users/views/frontend');
         }
     }
 
-    /**
-     * Check if module is used for backend application.
-     * @return boolean true if it's used for backend application.
-     */
-    public function getIsBackend()
-    {
-        if ($this->_isBackend === null) {
-            $this->_isBackend = strpos($this->controllerNamespace, 'backend') === false ? false : true;
+    public static function  initLang(){
+        $langNames = ['REGISTRATION_FORM_CUSTOMER', 'REGISTRATION_FORM_PERFORMER', 'users'];
+        $app = \Yii::$app;
+        foreach($langNames as $langName){
+            if (!isset($app->i18n->translations[$langName])) {
+                $app->i18n->translations[$langName] = [
+                    'class' => DbMessageSource::className(),
+                    'forceTranslation' => true,
+                ];
+            }
         }
-        return $this->_isBackend;
     }
 
     /**
@@ -179,6 +179,7 @@ class Module extends \yii\base\Module
      */
     public static function t($category, $message, $params = [], $language = null)
     {
+        self::initLang();
         return Yii::t($category, $message, $params, $language);
     }
 }

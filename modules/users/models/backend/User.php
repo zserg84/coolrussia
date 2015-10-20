@@ -14,7 +14,6 @@ use Yii;
  * @property string|null $password Password
  * @property string|null $repassword Repeat password
  *
- * @property Profile $profile Profile
  */
 class User extends \modules\users\models\User
 {
@@ -144,10 +143,6 @@ class User extends \modules\users\models\User
     public function afterSave($insert, $changedAttributes)
     {
         parent::afterSave($insert, $changedAttributes);
-
-        if ($this->profile !== null) {
-            $this->profile->save(false);
-        }
 
         $auth = Yii::$app->authManager;
         $name = $this->role ? $this->role : self::ROLE_DEFAULT;

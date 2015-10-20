@@ -113,7 +113,7 @@ class DefaultController extends Controller
     /**
      * Create user page.
      */
-    public function actionCreate()
+    /*public function actionCreate()
     {
         $user = new User(['scenario' => 'admin-create']);
         $profile = new Profile();
@@ -141,7 +141,7 @@ class DefaultController extends Controller
                 'roleArray' => $roleArray,
                 'statusArray' => $statusArray
             ]);
-    }
+    }*/
 
     /**
      * Update user page.

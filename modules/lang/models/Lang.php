@@ -3,6 +3,7 @@
 namespace modules\lang\models;
 
 use modules\blog\models\BlogsLang;
+use modules\direction\models\Directionlang;
 use modules\event\models\EventLang;
 use modules\faq\models\FaqLang;
 use Yii;
@@ -204,10 +205,10 @@ class Lang extends ActiveRecord
     }
 
     /*
-     * Возвращает список всех языков, которых еще нет в факе
+     * Возвращает список всех языков, которых еще нет в направлениях
      * */
-    public static function langForFaq($faqId, $exceptLang = null){
-        $langs = FaqLang::find()->where('faq_id = :faq', ['faq'=>$faqId])->all();
+    public static function langForDirection($directionId, $exceptLang = null){
+        $langs = Directionlang::find()->where('direction_id = :direction', ['direction'=>$directionId])->all();
         $langArr = self::getLangArr($langs, $exceptLang);
         return $langArr;
     }

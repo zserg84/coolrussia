@@ -3,15 +3,13 @@
 return [
     'vendorPath' => dirname(dirname(__DIR__)) . '/vendor',
     'timeZone' => 'Europe/Moscow',
+    'name' => 'TenderSystem',
     'modules' => [
         'users' => [
             'class' => modules\users\Module::className(),
-            'robotEmail' => 'robot@coolrussia.ru',
-            'robotName' => 'CoolRussia',
-            'requireEmailConfirmation'=>false,
-        ],
-        'geo' => [
-            'class' => modules\geo\Module::className(),
+            'robotEmail' => 'registration@glancecom.ru',
+            'robotName' => 'TenderRobot',
+            'requireEmailConfirmation'=>true,
         ],
         'image' => [
             'class' => modules\image\Module::className(),
@@ -22,31 +20,25 @@ return [
         'lang' => [
             'class' => modules\lang\Module::className(),
         ],
-        'blogs' => [
-            'class' => modules\blog\Module::className(),
-        ],
-        'comments' => [
-            'class' => modules\comments\Module::className(),
-        ],
         'gridview' => [
             'class' => \kartik\grid\Module::className(),
-        ],
-        'translations' => [
-            'class' => modules\translations\Module::className(),
-        ],
-        'faq' => [
-            'class' => modules\faq\Module::className(),
-        ],
-        'event' => [
-            'class' => modules\event\Module::className(),
         ],
         'page' => [
             'class' => modules\page\Module::className(),
         ],
+        'translations' => [
+            'class' => modules\translations\Module::className(),
+        ],
+        'contract' => [
+            'class' => modules\contract\Module::className(),
+        ],
+        'direction' => [
+            'class' => modules\direction\Module::className(),
+        ],
     ],
     'components' => [
         'user' => [
-            'class' => 'yii\web\User',
+            'class' => \common\components\User::className(),
             'identityClass' => 'modules\users\models\User',
             'loginUrl' => ['/users/guest/login'],
         ],
@@ -75,8 +67,12 @@ return [
             'ruleTable' => '{{%auth_rule}}',
             /**/
             'defaultRoles' => [
-                'user',
+                'user', 'customer', 'performer',
             ],
+        ],
+        'assetManager' => [
+            'class'=>'yii\web\AssetManager',
+            'linkAssets' => true,
         ],
         'formatter' => [
             'dateFormat' => 'dd.MM.y',
@@ -88,10 +84,14 @@ return [
             'class' => modules\translations\components\I18N::className(),
         ],
         'mailer' => [
-            'class' => \yii\swiftmailer\Mailer::className(),
+            'class' => 'yii\swiftmailer\Mailer',
             'transport' => [
                 'class' => 'Swift_SmtpTransport',
-                'constructArgs' => ['localhost', 25],
+                'host' => 'mail.tagtech.ru',
+                'username' => 'tag311706',
+                'password' => '123456',
+                'port' => '25',
+//                'encryption' => 'tls',
             ],
         ],
     ],

@@ -1,0 +1,487 @@
+message_category,category,Русский,English
+DIRECTIONS_FILTER,ALL_INTERFACES,"Интерфейсы_Фильтр по направлениям",
+DIRECTIONS_FILTER,ALL_INTERFACES,Интерфейсы_Кнопка_ПрименитьN,
+DIRECTION_N,ALL_INTERFACES,Интерфейсы_НаправлениеN,
+SUBDIRECTION_N_DIRECTION_N,ALL_INTERFACES,"Интерфейсы_ПодтипN направленияN ",
+COMPANY_SPECIALIZATION_FILTER,ALL_INTERFACES,"Интерфейсы_Специализация компании",
+ENTER_SPECIALIZATION,ALL_INTERFACES,"Интерфейсы_Введите специализацию",
+TERRITORIAL_FILTER,ALL_INTERFACES,"Интерфейсы_Территориальный фильтр",
+TERRITORIAL_FILTER_COUNTRY,ALL_INTERFACES,Интерфейсы_Страна,
+TERRITORIAL_FILTER_STATE,ALL_INTERFACES,Интерфейсы_Регион,
+TERRITORIAL_FILTER_CITY,ALL_INTERFACES,Интерфейсы_Город,
+DIRECTIONS_FILTER,ALL_INTERFACES,"Интерфейсы_Фильтр по направлениям",
+DIRECTIONS_FILTER,ALL_INTERFACES,Интерфейсы_Кнопка_ПрименитьN,
+DIRECTIONS_FILTER_APPLY_BUTTON,ALL_INTERFACES,Применить,
+DIRECTIONS_FILTER_CLEAR_BUTTON,ALL_INTERFACES,Очистить,
+COMPANY_SPECIALIZATION_FILTER_APPLY_BUTTON,ALL_INTERFACES,Применить,
+COMPANY_SPECIALIZATION_FILTER_CLEAR_BUTTON,ALL_INTERFACES,Очистить,
+TERRITORIAL_FILTER_APPLY_BUTTON,ALL_INTERFACES,Применить,
+"TERRITORIAL_FILTER_CLEAR BUTTON",ALL_INTERFACES,Очистить,
+VIEWS_BUTTON_ALL,ALL_INTERFACES,"Представление Лента заказов",
+FORUMS,ALL_INTERFACES,,
+VIEW_PERFORMER1,CUSTOMER_INTERFACE,"Представление Исполнители подтип1",
+VIEW_PERFORMER2,CUSTOMER_INTERFACE,"Представление Исполнители подтип2",
+VIEW_TAPE_OF_ORDERS1,CUSTOMER_INTERFACE,"Представление Лента заказов подтип1",
+VIEW_TAPE_OF_ORDERS2,CUSTOMER_INTERFACE,"Представление Лента заказов подтип2",
+VIEW_ELEMENT_PERFORMER_PROFILE_BUTTON,CUSTOMER_INTERFACE,"Представление Исполнители_кнопка_профиль",
+VIEW_ELEMENT_PERFORMER_TO_OFFER_THE_ORDER_BUTTON,CUSTOMER_INTERFACE,"Представление Исполнители_кнопка_Предложить_заказ",
+VIEW_ELEMENT_PERFORMER_FAVOURITES_BUTTON,CUSTOMER_INTERFACE,"Представление Исполнители_подтип1_кнопка_В_избранное",
+VIEW_ELEMENT_PERFORMER_REMOVE_BUTTON,CUSTOMER_INTERFACE,"Представление Исполнители_подтип2_кнопка_Удалить",
+VIEW_ELEMENT_TAPE_OF_ORDERS1_BUTTON_BROWSING,CUSTOMER_INTERFACE,"Представление Лента_заказов_подтип1_кнопка_Просмотр",
+VIEW_ELEMENT_TAPE_OF_ORDERS1_BUTTON_CUSTOMER_PROFILE,CUSTOMER_INTERFACE,"Представление Лента_заказов_подтип1_кнопка_Заказчик",
+VIEW_ELEMENT_TAPE_OF_ORDERS2_EDIT_BUTTON,CUSTOMER_INTERFACE,"Представление Лента_заказов_подтип2_Редактировать",
+VIEW_ELEMENT_TAPE_OF_ORDERS2_ANSWERS_TO_ORDER,CUSTOMER_INTERFACE,"Представление Лента_заказов_Отклики на заказ",
+NEW_ORDER_BUTTON,CUSTOMER_INTERFACE,Кнопка_Новый_заказ,
+VIEW_ELEMENT_PERFORMER_COMPANY_ID,CUSTOMER_INTERFACE,элемент_вид_Исполнители_ID,
+VIEW_ELEMENT_PERFORMER_EXPERIENCE,CUSTOMER_INTERFACE,элемент_вид_Исполнители_Опыт,
+VIEW_ELEMENT_PERFORMER_SPECIALIZATION,CUSTOMER_INTERFACE,элемент_вид_Исполнители_Специализация,
+VIEW_ELEMENT_TAPE_OF_ORDERS_ORDER_ID,CUSTOMER_INTERFACE,"элемент_вид_лента_заказов_Заказ ID",
+VIEW_ELEMENT_TAPE_OF_ORDERS_DATE_OF_PLACEMENT,CUSTOMER_INTERFACE,"элемент_вид_лента_заказов_Дата размещения",
+VIEW_ELEMENT_TAPE_OF_ORDERS_BUDGET,CUSTOMER_INTERFACE,элемент_вид_лента_заказов_Бюджет,
+VIEW_ELEMENT_TAPE_OF_ORDERS_SHORT_DESCRIPTION,CUSTOMER_INTERFACE,"элемент_вид_лента_заказов_Краткое описание",
+VIEW_ELEMENT_TAPE_OF_ORDERS_NUMBER,CUSTOMER_INTERFACE,элемент_вид_лента_заказов_Количество,
+BUTTON_EDIT_PROFILE_CUSTOMER,CUSTOMER_INTERFACE,"Кнопка_Редактировать профиль Заказчика",
+BUTTON_SETTINGS_CUSTOMER,CUSTOMER_INTERFACE,"Кнопка_Настройки Заказчика",
+BUTTON_EXIT_CUSTOMER,CUSTOMER_INTERFACE,Кнопка_Выход_из_интерфейса_заказчика,
+FORM_NAME_ANSWER_OF_THE_PERFORMER_TO_ORDER,FORM_ANSWER_OF_THE_PERFORMER_TO_ORDER,"Наименование формы Отклик на заказ",
+ANSWER_OF_THE_PERFORMER_TO_ORDER_PROPOSAL_OF_THE_PERFORMER,FORM_ANSWER_OF_THE_PERFORMER_TO_ORDER,"Предложение исполнителя*",
+ANSWER_OF_THE_PERFORMER_TO_ORDER_NOTE,FORM_ANSWER_OF_THE_PERFORMER_TO_ORDER,"Комментарий * Указать сумму предложения Заказчику, за которую Ваша компания готова выполнить заказ.",
+ANSWER_OF_THE_PERFORMER_TO_ORDER_CANCEL_BUTTON,FORM_ANSWER_OF_THE_PERFORMER_TO_ORDER,Отмена,
+ANSWER_OF_THE_PERFORMER_TO_ORDER_OK_BUTTON,FORM_ANSWER_OF_THE_PERFORMER_TO_ORDER,Подтвердить,
+FORM_NAME_FORM_ANSWER_OF_THE_PERFORMER_TO_THE_OFFER,FORM_ANSWER_OF_THE_PERFORMER_TO_THE_OFFER,"Наименование формы - Отклики исполнителей по заказу ",
+FORM_ANSWER_OF_THE_PERFORMER_TO_THE_OFFER_ALL,FORM_ANSWER_OF_THE_PERFORMER_TO_THE_OFFER,"Всего ",
+FORM_ANSWER_OF_THE_PERFORMER_TO_THE_OFFER_NEW,FORM_ANSWER_OF_THE_PERFORMER_TO_THE_OFFER,Новых,
+FORM_ANSWER_OF_THE_PERFORMER_TO_THE_OFFER_ID,FORM_ANSWER_OF_THE_PERFORMER_TO_THE_OFFER,ID,
+FORM_ANSWER_OF_THE_PERFORMER_TO_THE_OFFER_EXPERIENCE,FORM_ANSWER_OF_THE_PERFORMER_TO_THE_OFFER,Опыт:,
+FORM_ANSWER_OF_THE_PERFORMER_TO_THE_OFFER_ADRESS,FORM_ANSWER_OF_THE_PERFORMER_TO_THE_OFFER,Адрес:,
+FORM_ANSWER_OF_THE_PERFORMER_TO_THE_OFFER_PROPOSAL_OF_THE_PERFORMER,FORM_ANSWER_OF_THE_PERFORMER_TO_THE_OFFER,"Предложение исполнителя",
+FORM_ANSWER_OF_THE_PERFORMER_TO_THE_OFFER_COMMENT_TO_THE_OFFER,FORM_ANSWER_OF_THE_PERFORMER_TO_THE_OFFER,"Комментарии к предложению",
+FORM_ANSWER_OF_THE_PERFORMER_TO_THE_OFFER_PROFILE,FORM_ANSWER_OF_THE_PERFORMER_TO_THE_OFFER,Профиль,
+FORM_ANSWER_OF_THE_PERFORMER_TO_THE_OFFER_CHOOSE_THE_PERFORMER,FORM_ANSWER_OF_THE_PERFORMER_TO_THE_OFFER,"Выбрать исполнителя",
+FORM_ANSWER_OF_THE_PERFORMER_TO_THE_OFFER_CANCEL_BUTTON,FORM_ANSWER_OF_THE_PERFORMER_TO_THE_OFFER,Отмена,
+FORM_ANSWER_OF_THE_PERFORMER_TO_THE_OFFER_OK_BUTTON,FORM_ANSWER_OF_THE_PERFORMER_TO_THE_OFFER,Ок,
+CUSTOMER_SETTING1,FORM_CUSTOMER_SETTINGS,Настройки_Заказчика_настройка1,
+CUSTOMER_SETTING2,FORM_CUSTOMER_SETTINGS,Настройки_Заказчика_настройка2,
+CUSTOMER_SETTING3,FORM_CUSTOMER_SETTINGS,Настройки_Заказчика_настройка3,
+FORM_NAME_OFFER_OF_THE_ORDER_TO_PERFORMER,FORM_OFFER_OF_THE_ORDER_TO_PERFORMER,"Выбрать и предложить заказы",
+OFFER_OF_THE_ORDER_TO_PERFORMER_ORDER,FORM_OFFER_OF_THE_ORDER_TO_PERFORMER,Заказ,
+OFFER_OF_THE_ORDER_TO_PERFORMER_ID,FORM_OFFER_OF_THE_ORDER_TO_PERFORMER,ID,
+OFFER_OF_THE_ORDER_TO_PERFORMER_BUDGET,FORM_OFFER_OF_THE_ORDER_TO_PERFORMER,Бюджет,
+OFFER_OF_THE_ORDER_TO_PERFORMER_CANCEL_BUTTON,FORM_OFFER_OF_THE_ORDER_TO_PERFORMER,"Отмена ",
+OFFER_OF_THE_ORDER_TO_PERFORMER_CONFIRM,FORM_OFFER_OF_THE_ORDER_TO_PERFORMER,ОК,
+ORDER_FORM_NAME,FORM_ORDER,"Наименование формы - Заказ",
+"ORDER_DATE ",FORM_ORDER,"Дата размещения заказа",
+ORDER_ID,FORM_ORDER,"ID заказа",
+USER_CONTRACT,FORM_ORDER,Пользователь,
+DIRECTIONS,FORM_ORDER,"Список направлений к которым относится заказ",
+NOTE,FORM_ORDER,"Примечание!Поиск заказа Исполнителем осуществляемся по данным параметрам. Для быстрого и корректного выбора Исполнителя внимательно заполните данное поле!",
+ORDER_SHORT_DESCRIPTION,FORM_ORDER,"Краткое описание заказа*",
+ORDER_DESCRIPTION,FORM_ORDER,"Описание заказа*",
+ORDER_COMPLETION_DATE,FORM_ORDER,"Срок исполнения до*",
+ORDER_PLACEMENT_TIME,FORM_ORDER,"Срок размещения заказа*",
+ORDER_MATIRIAL,FORM_ORDER,Материал*,
+ORDER_MODEL,FORM_ORDER,"Прикрепить модель*",
+ORDER_MODEL_UPLOAD,FORM_ORDER,"Загрузить архив модели (zip, rar)",
+ORDER_MODEL_UPLOAD_NOTE,FORM_ORDER,"(архив ZIP, RAR форматы dwg,dxf,step,iges,stl)",
+ORDER_NUMBER,FORM_ORDER,Количество*,
+ORDER_BUDGET,FORM_ORDER,Бюджет*,
+ORDER_MATERIAL_CUSTOMER,FORM_ORDER,"Материал заказчика*",
+ORDER_MATERIAL_CUSTOMER_FIELD_YES,FORM_ORDER,"Выбор ""Да"" ""Нет"" в поле",
+ORDER_MATERIAL_CUSTOMER_FIELD_NO,FORM_ORDER,"Выбор ""Да"" ""Нет"" в поле",
+ORDER_MATERIALS_INCLUDED_IN_THE_BUDGET,FORM_ORDER,"Материал включен в бюджет*",
+ORDER_MATERIALS_INCLUDED_IN_THE_BUDGET_FIELD_YES,FORM_ORDER,"Выбор ""Да"" ""Нет"" в поле",
+ORDER_MATERIALS_INCLUDED_IN_THE_BUDGET_FIELD_NO,FORM_ORDER,"Выбор ""Да"" ""Нет"" в поле",
+ORDER_MODEL_IS_NECESSARY,FORM_ORDER,"Требуется моделирование*",
+ORDER_MODEL_IS_NECESSARY_FIELD_YES,FORM_ORDER,"Выбор ""Да"" ""Нет"" в поле",
+ORDER_MODEL_IS_NECESSARY_FIELD_NO,FORM_ORDER,"Выбор ""Да"" ""Нет"" в поле",
+ORDER_FOTO,FORM_ORDER,Фото,
+ORDER_UPLOAD_FOTO,FORM_ORDER,"Загрузить (jpg)",
+ORDER_ENTER_SYMBOLS,FORM_ORDER,"Введите символы с картинки",
+ORDER_SAVE_BUTTON,FORM_ORDER,"Кнопка Разместить",
+ORDER_CANCEL_BUTTON,FORM_ORDER,"Кнопка Отменить",
+ORDER_ADD_DIRECTION_BUTTON,FORM_ORDER,"Кнопка Добавить",
+PERFORMER_SETTINGS,FORM_PERFORMER_SETTINGS,Форма_Настройки_Исполнителя_наименование_формы,
+PERFORMER_SETTING1,FORM_PERFORMER_SETTINGS,Форма_Настройки_Исполнителя_настройка1,
+PERFORMER_SETTING2,FORM_PERFORMER_SETTINGS,Фориа_Настройки_Исполнителя_настройка2,
+PERFORMER_SETTING3,FORM_PERFORMER_SETTINGS,Форма_Настройки_Исполнителя_настройка3,
+PERFORMER_SETTING4,FORM_PERFORMER_SETTINGS,Форма_Настройки_Исполнителя_настройка4,
+PERFORMER_SETTING5,FORM_PERFORMER_SETTINGS,Форма_Настройки_Исполнителя_настройка5,
+PERFORMER_SETTING_COUNTRY,FORM_PERFORMER_SETTINGS,Форма_Настройки_Исполнителя_Страна,
+PERFORMER_SETTING_STATE,FORM_PERFORMER_SETTINGS,Форма_Настройки_Исполнителя_Регион,
+PERFORMER_SETTING_CITY,FORM_PERFORMER_SETTINGS,Форма_Настройки_Исполнителя_Город,
+PERFORMER_SETTINGS_ADD_BUTTON,FORM_PERFORMER_SETTINGS,Форма_Настройки_Исполнителя_кнопка_добавить,
+PERFORMER_SETTINGS_CANCEL_BUTTON,FORM_PERFORMER_SETTINGS,Форма_Настройки_Исполнителя_кнопка_Отмена,
+PERFORMER_SETTINGS_SAVE_BUTTON,FORM_PERFORMER_SETTINGS,Форма_Настройки_Исполнителя_кнопка_Сохранить,
+VIEW_PERFORMERS,GUEST_INTERFACE,,
+VIEW_TAPE_OF_ORDERS,GUEST_INTERFACE,,
+VIEW_ELEMENT_TAPE_OF_ORDERS_ORDER_ID,GUEST_INTERFACE,"элемент_вид_лента_заказов_Заказ ID",
+VIEW_ELEMENT_TAPE_OF_ORDERS_DATE_OF_PLACEMENT,GUEST_INTERFACE,"элемент_вид_лента_заказов_Дата размещения",
+VIEW_ELEMENT_TAPE_OF_ORDERS_BUDGET,GUEST_INTERFACE,элемент_вид_лента_заказов_Бюджет,
+VIEW_ELEMENT_TAPE_OF_ORDERS_SHORT_DESCRIPTION,GUEST_INTERFACE,"элемент_вид_лента_заказов_Краткое описание",
+VIEW_ELEMENT_TAPE_OF_ORDERS_NUMBER,GUEST_INTERFACE,элемент_вид_лента_заказов_Количество,
+VIEW_ELEMENT_TAPE_OF_ORDERS_BUTTON_BROWSING,GUEST_INTERFACE,Кнопка_вид_лента_заказов_Просмотр,
+VIEW_ELEMENT_TAPE_OF_ORDERS_BUTTON_CUSTOMER_PROFILE,GUEST_INTERFACE,Кнопка_вид_лента_заказов_Заказчик,
+VIEW_ELEMENT_PERFORMERS_COMPANY_ID,GUEST_INTERFACE,элемент_вид_Исполнители_ID,
+VIEW_ELEMENT_PERFORMERS_EXPERIENCE,GUEST_INTERFACE,элемент_вид_Исполнители_Опыт,
+VIEW_ELEMENT_PERFORMERS_SPECIALIZATION,GUEST_INTERFACE,элемент_вид_Исполнители_Специализация,
+VIEW_ELEMENT_PERFORMERS_PROFILE_BUTTON,GUEST_INTERFACE,Кнопка_вид_Исполнители_Профиль,
+VIEW_ELEMENT_PERFORMERS_TO_OFFER_THE_ORDER_BUTTON,GUEST_INTERFACE,Кнопка_вид_Исполнители_Предложить_заказ,
+VIEW_ELEMENT_PERFORMERS_REMOVE_BUTTON,GUEST_INTERFACE,Кнопка_вид_Исполнители_Удалить,
+FRONTEND_FLASH_SUCCESS_RECOVERY,GUEST_INTERFACE,"На ваш E-mail отправлено сообщение. Для изменения пароля перейдите по ссылке, указанной в письме.",
+BUTTON_FOR_CUSTOMER,Homepage,"Кнопка Для заказчика",
+BUTTON_FOR_PERFORMER,Homepage,"Кнопка Для Исполнителя",
+ABOUT_THE_SYSTEM,Homepage,"О системе",
+ALL_PERFORMERS,Homepage,"Все исполнители",
+ALL_ORDERS,Homepage,"Все заказы",
+TEXT_FOR_THE_HEADING_OF_GREETING,Homepage,"Текст заголовка приветствия на главной странице",
+TEXT_OF_GREETING,Homepage,"Текст приветствия на главной странице",
+TEXT_ABOUT_THE_SYSTEM,Homepage,"Текст О системе",
+TEXT_ALL_PERFORMERS,Homepage,"Текст Все исполнители",
+TEXT_ALL_ORDERS,Homepage,"Текст Все заказы",
+TEXT_FOR_HEADING_OF_SLIDER1,Homepage,"Текст Заголовка слайдера 1",
+TEXT_FOR_SLIDER1,Homepage,"Текст под заголовком слайдера 1",
+TEXT_FOR_HEADING_OF_SLIDER2,Homepage,"Текст Заголовка слайдера 2",
+TEXT_FOR_SLIDER2,Homepage,"Текст под заголовком слайдера 2",
+TEXT_FOR_HEADING_OF_SLIDER3,Homepage,"Текст Заголовка слайдера 3",
+TEXT_FOR_SLIDER3,Homepage,"Текст под заголовком слайдера 3",
+TEXT_FOR_HEADING_OF_SLIDER4,Homepage,"Текст Заголовка слайдера 4",
+TEXT_FOR_SLIDER4,Homepage,"Текст под заголовком слайдера 4",
+TEXT_FOR_HEADING_OF_SLIDER5,Homepage,"Текст Заголовка слайдера 5",
+TEXT_FOR_SLIDER5,Homepage,"Текст под заголовком слайдера 5",
+ABOUT_MENU_ALL_PAGES,"Horizontal menu ALL pages","О проекте",About
+NEWS_MENU_ALL_PAGES,"Horizontal menu ALL pages",Новости,
+TECHNOLOGIES_MENU_ALL_PAGES,"Horizontal menu ALL pages",Технологии,
+ARTICLES_MENU_ALL_PAGES,"Horizontal menu ALL pages",Статьи,
+TRAININGS_MENU_ALL_PAGES,"Horizontal menu ALL pages",Обучение,
+PARTNERS_MENU_ALL_PAGES,"Horizontal menu ALL pages",Партнеры,
+CONTACTS_MENU_ALL_PAGES,"Horizontal menu ALL pages",Контакты,
+TECHNOLOGIES_SUBMENU_ALL_PAGES_DIRECTION1,"Horizontal menu ALL pages","ПОДМЕНЮ_ТЕХНОЛОГИИ Направление 1",
+TECHNOLOGIES_SUBMENU_ALL_PAGES_DIRECTION2,"Horizontal menu ALL pages","ПОДМЕНЮ_ТЕХНОЛОГИИ Направление 2",
+TECHNOLOGIES_SUBMENU_ALL_PAGES_DIRECTION3,"Horizontal menu ALL pages","ПОДМЕНЮ_ТЕХНОЛОГИИ Направление 3",
+TECHNOLOGIES_SUBMENU_ALL_PAGES_DIRECTION4,"Horizontal menu ALL pages","ПОДМЕНЮ_ТЕХНОЛОГИИ Направление 4",
+TECHNOLOGIES_SUBMENU_ALL_PAGES_DIRECTION5,"Horizontal menu ALL pages","ПОДМЕНЮ_ТЕХНОЛОГИИ Направление 5",
+TECHNOLOGIES_SUBMENU_ALL_PAGES_DIRECTION6,"Horizontal menu ALL pages","ПОДМЕНЮ_ТЕХНОЛОГИИ Направление 6",
+TECHNOLOGIES_SUBMENU_ALL_PAGES_DIRECTION7,"Horizontal menu ALL pages","ПОДМЕНЮ_ТЕХНОЛОГИИ Направление 7",
+TECHNOLOGIES_SUBMENU_ALL_PAGES_DIRECTION8,"Horizontal menu ALL pages","ПОДМЕНЮ_ТЕХНОЛОГИИ Направление 8",
+TECHNOLOGIES_SUBMENU_ALL_PAGES_DIRECTION9,"Horizontal menu ALL pages","ПОДМЕНЮ_ТЕХНОЛОГИИ Направление 9",
+TECHNOLOGIES_SUBMENU_ALL_PAGES_DIRECTION10,"Horizontal menu ALL pages","ПОДМЕНЮ_ТЕХНОЛОГИИ Направление 10",
+TECHNOLOGIES_SUBMENU_ALL_PAGES_DIRECTION11,"Horizontal menu ALL pages","ПОДМЕНЮ_ТЕХНОЛОГИИ Направление 11",
+TECHNOLOGIES_SUBMENU_ALL_PAGES_DIRECTION12,"Horizontal menu ALL pages","ПОДМЕНЮ_ТЕХНОЛОГИИ Направление 12",
+TECHNOLOGIES_SUBMENU_ALL_PAGES_DIRECTION13,"Horizontal menu ALL pages","ПОДМЕНЮ_ТЕХНОЛОГИИ Направление 13",
+TECHNOLOGIES_SUBMENU_ALL_PAGES_DIRECTION14,"Horizontal menu ALL pages","ПОДМЕНЮ_ТЕХНОЛОГИИ Направление 14",
+TECHNOLOGIES_SUBMENU_ALL_PAGES_DIRECTION15,"Horizontal menu ALL pages","ПОДМЕНЮ_ТЕХНОЛОГИИ Направление 15",
+TECHNOLOGIES_SUBMENU_ALL_PAGES_DIRECTION16,"Horizontal menu ALL pages","ПОДМЕНЮ_ТЕХНОЛОГИИ Направление 16",
+TECHNOLOGIES_SUBMENU_ALL_PAGES_DIRECTION17,"Horizontal menu ALL pages","ПОДМЕНЮ_ТЕХНОЛОГИИ Направление 17",
+TECHNOLOGIES_SUBMENU_ALL_PAGES_DIRECTION18,"Horizontal menu ALL pages","ПОДМЕНЮ_ТЕХНОЛОГИИ Направление 18",
+TECHNOLOGIES_SUBMENU_ALL_PAGES_DIRECTION19,"Horizontal menu ALL pages","ПОДМЕНЮ_ТЕХНОЛОГИИ Направление 19",
+TECHNOLOGIES_SUBMENU_ALL_PAGES_DIRECTION20,"Horizontal menu ALL pages","ПОДМЕНЮ_ТЕХНОЛОГИИ Направление 20",
+TECHNOLOGIES_SUBMENU_ALL_PAGES_DIRECTION21,"Horizontal menu ALL pages","ПОДМЕНЮ_ТЕХНОЛОГИИ Направление 21",
+TECHNOLOGIES_SUBMENU_ALL_PAGES_DIRECTION22,"Horizontal menu ALL pages","ПОДМЕНЮ_ТЕХНОЛОГИИ Направление 22",
+TECHNOLOGIES_SUBMENU_ALL_PAGES_DIRECTION23,"Horizontal menu ALL pages","ПОДМЕНЮ_ТЕХНОЛОГИИ Направление 23",
+TECHNOLOGIES_SUBMENU_ALL_PAGES_DIRECTION24,"Horizontal menu ALL pages","ПОДМЕНЮ_ТЕХНОЛОГИИ Направление 24",
+TECHNOLOGIES_SUBMENU_ALL_PAGES_DIRECTION25,"Horizontal menu ALL pages","ПОДМЕНЮ_ТЕХНОЛОГИИ Направление 25",
+SELECT_LANGUAGE_ALL_PAGES,"Horizontal menu ALL pages","Select language",
+SEARCH,"Horizontal menu ALL pages",,
+LOGIN_LOGIN_FORM_ALL_PAGES,"Login form for ALL pages","Вход в систему поле Логин",
+PASSWORD_LOGIN_FORM_ALL_PAGES,"Login form for ALL pages","Вход в систему поле Пароль",
+ENTRANCE_BUTTON_LOGIN_FOR_ALL_PAGES,"Login form for ALL pages","Вход в систему кнопка Войти",
+FORGOT_PASSWORD_BUTTON_LOGIN_FOR_ALL_PAGES,"Login form for ALL pages","Вход в систему кнопка Забыли?",
+REGISTRATION_BUTTON_LOGIN_FOR_ALL_PAGES,"Login form for ALL pages","Вход в систему кнопка Регистрация",
+VIEW_PERFORMER1,PERFORMER_INTERFACE,"Представление Исполнители подтип1",
+VIEW_PERFORMER2,PERFORMER_INTERFACE,"Представление Исполнители подтип2",
+VIEW_PERFORMER3,PERFORMER_INTERFACE,"Представление Исполнители подтип3",
+VIEW_TAPE_OF_ORDERS1,PERFORMER_INTERFACE,"Представление Лента заказов подтип1",
+VIEW_TAPE_OF_ORDERS2,PERFORMER_INTERFACE,"Представление Лента заказов подтип2",
+VIEW_TAPE_OF_ORDERS3,PERFORMER_INTERFACE,"Представление Лента заказов подтип3",
+VIEW_TAPE_OF_ORDERS4,PERFORMER_INTERFACE,"Представление Лента заказов подтип4",
+VIEW_TAPE_OF_ORDERS5,PERFORMER_INTERFACE,"Представление Лента заказов подтип5",
+VIEW_COMMENTS1,PERFORMER_INTERFACE,"Представление Комментарии подтип1",
+VIEW_COMMENTS2,PERFORMER_INTERFACE,"Представление Комментарии подтип2",
+VIEW_ELEMENT_PERFORMER_1_2_3_PROFILE_BUTTON,PERFORMER_INTERFACE,"Представление Исполнители_подтип1_2_3_кнопка_профиль",
+VIEW_ELEMENT_PERFORMER_1_2_3_TO_OFFER_THE_ORDER_BUTTON,PERFORMER_INTERFACE,"Представление Исполнители_подтип1_2_3_кнопка_Предложить_заказ",
+VIEW_ELEMENT_PERFORMER_1_2_FAVOURITES_BUTTON,PERFORMER_INTERFACE,"Представление Исполнители_подтип1_2_кнопка_В_избранное",
+VIEW_ELEMENT_PERFORMER_3_REMOVE_BUTTON,PERFORMER_INTERFACE,"Представление Исполнители_подтип_3_кнопка_Удалить",
+VIEW_ELEMENT_TAPE_OF_ORDERS_1_2_3_4_BUTTON_BROWSING,PERFORMER_INTERFACE,"Представление Лента_заказов_подтип1_2_3_4_кнопка_Просмотр",
+VIEW_ELEMENT_TAPE_OF_ORDERS_1_2_ANSWER_TO_THE_ORDER_BUTTON,PERFORMER_INTERFACE,"Представление Лента_заказов_подтип1_2_кнопка_Отклик_на_заказ",
+VIEW_ELEMENT_TAPE_OF_ORDERS_3_4_REFUSE_BUTTON,PERFORMER_INTERFACE,"Представление Лента_заказов_подтип3_кнопка_Удалить",
+,PERFORMER_INTERFACE,"Представление Лента_заказов_подтип4_кнопка_Отказаться",
+VIEW_ELEMENT_TAPE_OF_ORDERS_5_EDIT_BUTTON,PERFORMER_INTERFACE,"Представление Лента_заказов_подтип5_кнопка_Редактировать",
+VIEW_ELEMENT_TAPE_OF_ORDERS_5_ANSWERS_TO_ORDER_BUTTON,PERFORMER_INTERFACE,"Представление Лента_заказов_подтип5_кнопка_Отклики на заказ",
+VIEW_ELEMENT_COMMENTS_1_2_EDIT_BUTTON,PERFORMER_INTERFACE,"Представление Комментарии_подтип1_2_кнопка_Редактировать",
+VIEW_ELEMENT_COMMENTS_1_2_RESPOND_TO_THE_COMMENT_BUTTON,PERFORMER_INTERFACE,"Представление Комментарии_подтип1_2_кнопка_Ответить",
+BUTTON_EDIT_PROFILE_PERFORMER,PERFORMER_INTERFACE,"Кнопка_Редактировать профиль Исполнителя",
+BUTTON_SETTINGS_PERFORMER,PERFORMER_INTERFACE,"Кнопка_Настройки Исполнителя",
+BUTTON_EXIT_PERFORMER,PERFORMER_INTERFACE,Кнопка_Выход_из_интерфейса_Исполнителя,
+NEW_ORDER_BUTTON,PERFORMER_INTERFACE,Кнопка_Новый_заказ_интерфейс_исполнителя,
+NAME_OF_CUSTOMER_REG_FORM,REGISTRATION_FORM_CUSTOMER,Наименование_формы_Регистрация_заказчика,
+DATE_OF_REGISTRATION_CUSTOMER_REG_FORM,REGISTRATION_FORM_CUSTOMER,"Дата регистрации Заказчика",
+CUSTOMER_ID_REG_FORM,REGISTRATION_FORM_CUSTOMER,ID_заказчик,
+LOGIN_CUSTOMER_REG_FORM,REGISTRATION_FORM_CUSTOMER,Логин_заказчик,
+PASSWORD_CUSTOMER_REG_FORM,REGISTRATION_FORM_CUSTOMER,Пароль_заказчик,
+PASSWORD2_CUSTOMER_REG_FORM,REGISTRATION_FORM_CUSTOMER,Пароль_повторно_заказчик,
+NAME_OR_COMPANY_NAME_CUSTOMER_REG_FORM,REGISTRATION_FORM_CUSTOMER,Имя_Наименование_компании_заказчика,
+EMAIL_CUSTOMER_REG_FORM,REGISTRATION_FORM_CUSTOMER,Email_заказчика,
+PHONE1_CUSTOMER_REG_FORM,REGISTRATION_FORM_CUSTOMER,Телефон_заказчика,
+COUNTRY_PHONE_CODE1_CUSTOMER_REG_FORM,REGISTRATION_FORM_CUSTOMER,Код_страны_заказчика,
+CITY_PHONE_CODE1_CUSTOMER_REG_FORM,REGISTRATION_FORM_CUSTOMER,Код_города_заказчика,
+PHONE_NUMBER1_CUSTOMER_REG_FORM,REGISTRATION_FORM_CUSTOMER,Номер_телефона_заказчика,
+COUNTRY_CUSTOMER_REG_FORM,REGISTRATION_FORM_CUSTOMER,Страна_заказчика,
+REGION_CUSTOMER_REG_FORM,REGISTRATION_FORM_CUSTOMER,Регион_заказчика,
+CITY_CUSTOMER_REG_FORM,REGISTRATION_FORM_CUSTOMER,Город_заказчика,
+LICENSE_AGREEMENT_CUSTOMER_REG_FORM,REGISTRATION_FORM_CUSTOMER,"Я подтверждаю согласие с Пользовательским соглашением",
+AVATAR_CUSTOMER_REG_FORM,REGISTRATION_FORM_CUSTOMER,Аватар,
+ENTER_SYMBOLS_FROM_THE_PICTURE_CUSTOMER_REG_FORM,REGISTRATION_FORM_CUSTOMER,"Введите символы с картинки",
+CANCEL_BUTTON_CUSTOMER_REG_FORM,REGISTRATION_FORM_CUSTOMER,"Кнопка Отмена",
+REGISTRATION_BUTTON_CUSTOMER_REG_FORM,REGISTRATION_FORM_CUSTOMER,"Кнопка Зарегистрироваться",
+NAME_OF_PERFORMER_REG_FORM,REGISTRATION_FORM_PERFORMER,Наименование_формы_Регистрация_Исполнителя,
+DATE_OF_REGISTRATION_PERFORMER_REG_FORM,REGISTRATION_FORM_PERFORMER,"Дата регистрации",
+ID_PERFORMER_REG_FORM,REGISTRATION_FORM_PERFORMER,ID_исполнителя,
+LOGIN_PERFORMER_REG_FORM,REGISTRATION_FORM_PERFORMER,Логин,
+PASSWORD1_PERFORMER_REG_FORM,REGISTRATION_FORM_PERFORMER,Пароль,
+PASSWORD2_PERFORMER_REG_FORM,REGISTRATION_FORM_PERFORMER,"Пароль повторно",
+COMPANY_NAME_PERFORMER_REG_FORM,REGISTRATION_FORM_PERFORMER,"Наименование компании",
+ABOUT_COMPANY_PERFORMER_REG_FORM,REGISTRATION_FORM_PERFORMER,"О компании",
+COMPANY_SPECIALIZATION_PERFORMER_REG_FORM,REGISTRATION_FORM_PERFORMER,"Специализация компании",
+YEARS_IN_THE_MARKET_PERFORMER_REG_FORM,REGISTRATION_FORM_PERFORMER,"Количество лет на рынке",
+COMPANY_ACTIVITIES_PERFORMER_REG_FORM,REGISTRATION_FORM_PERFORMER,"Направление деятельности",
+COMPANY_SITE_PERFORMER_REG_FORM,REGISTRATION_FORM_PERFORMER,"Сайт компании",
+EMAIL_PERFORMER_REG_FORM,REGISTRATION_FORM_PERFORMER,E-mail,
+PHONE1_PERFORMER_REG_FORM,REGISTRATION_FORM_PERFORMER,"Телефон 1",
+COUNTRY_PHONE_CODE1_PERFORMER_REG_FORM,REGISTRATION_FORM_PERFORMER,"Код страны",
+CITY_PHONE_CODE1_PERFORMER_REG_FORM,REGISTRATION_FORM_PERFORMER,"Код города",
+PHONE_NUMBER1_PERFORMER_REG_FORM,REGISTRATION_FORM_PERFORMER,Номер_телефона_исполнитель,
+PHONE2_PERFORMER_REG_FORM,REGISTRATION_FORM_PERFORMER,"Телефон 2_исполнитель",
+COUNTRY_PHONE_CODE2_PERFORMER_REG_FORM,REGISTRATION_FORM_PERFORMER,"Код страны2_исполнитель",
+CITY_PHONE_CODE2_PERFORMER_REG_FORM,REGISTRATION_FORM_PERFORMER,"Код города2_исполнитель",
+PHONE_NUMBER2_PERFORMER_REG_FORM,REGISTRATION_FORM_PERFORMER,Номер_телефона2_исполнитель,
+COUNTRY_PERFORMER_REG_FORM,REGISTRATION_FORM_PERFORMER,Страна,
+REGION_PERFORMER_REG_FORM,REGISTRATION_FORM_PERFORMER,Регион,
+CITY_PERFORMER_REG_FORM,REGISTRATION_FORM_PERFORMER,Город,
+STREET_PERFORMER_REG_FORM,REGISTRATION_FORM_PERFORMER,Улица,
+HOUSE_PERFORMER_REG_FORM,REGISTRATION_FORM_PERFORMER,Дом,
+BUILDING_PERFORMER_REG_FORM,REGISTRATION_FORM_PERFORMER,Корпус,
+STRUCTURE_PERFORMER_REG_FORM,REGISTRATION_FORM_PERFORMER,Строение,
+COMPANY_LOGO_PERFORMER_REG_FORM,REGISTRATION_FORM_PERFORMER,Логотип,
+LOAD_LOGO_PERFORMER_REG_FORM,REGISTRATION_FORM_PERFORMER,Загрузить_логотип,
+EXAMPLES_OF_WORKS_PERFORMER_REG_FORM,REGISTRATION_FORM_PERFORMER,"Примеры работ",
+LOAD_FOTO_EXAMPLES_OF_WORKS_PERFOMER_REG_FORM,REGISTRATION_FORM_PERFORMER,Загрузить_примеры_работ,
+EMAIL_FOR_OBTAINING_ORDERS_REG_FORM,REGISTRATION_FORM_PERFORMER,"E-mail для получения заказов",
+LICENSE_AGREEMENT_PERFORMER_REG_FORM,REGISTRATION_FORM_PERFORMER,"Я подтверждаю согласие с Пользовательским соглашением",
+ENTER_SYMBOLS_FROM_THE_PICTURE_PERFORMER_REG_FORM,REGISTRATION_FORM_PERFORMER,"Введите символы с картинки",
+LOAD_FOTO_PERFORMER_REG_FORM,REGISTRATION_FORM_PERFORMER,"Загрузить (gif,png,jpg, jpeg) max.300kB",
+"Access control",themes-admin,"Управление доступом","Access control"
+Blogs,themes-admin,Блоги,Blogs
+Comments,themes-admin,Комментарии,Comments
+Dashboard,themes-admin,"Панель управления",Dashboard
+"Hello, {name}",themes-admin,"Здравствуйте, {name}","Hello, {name}"
+Home,themes-admin,Главная,Home
+"Member since",themes-admin,"Зарегестрирован с","Member since"
+"Models management",themes-admin,"Управления моделями","Models management"
+Online,themes-admin,Онлайн,Online
+Permissions,themes-admin,Права,Permissions
+Profile,themes-admin,Профиль,Profile
+Roles,themes-admin,Роли,Roles
+Rules,themes-admin,Правила,Rules
+"Sign out",themes-admin,Выход,"Sign out"
+"Toggle navigation",themes-admin,"Показать/Скрыть меню","Toggle navigation"
+Users,themes-admin,Пользователи,Users
+GO_TO_SITE,themes-admin,"Перейти на сайт","Go to site"
+Geo,themes-admin,География,Geography
+GeoCountry,themes-admin,Страны,Countries
+GeoRegion,themes-admin,Регионы,Regions
+GeoCity,themes-admin,Города,Cities
+Feedback,themes-admin,Feedback,
+Faq,themes-admin,FAQ,
+"Static Pages",themes-admin,"Статичные страницы",
+Lang,themes-admin,Языки,
+Translations,themes-admin,Переводы,
+"All Rights Reserved",themes-site,"Все права защищены","All Rights Reserved"
+Blogs,themes-site,Блоги,Blogs
+"Change email",themes-site,"Сменить e-mail","Change email"
+"Change password",themes-site,"Сменить пароль","Change password"
+Contacts,themes-site,Контакты,Contacts
+"Edit profile",themes-site,"Редактировать профиль","Edit profile"
+"GO BACK TO THE HOMEPAGE",themes-site,"ВЕРНУТЬСЯ ОБРАТНО НА ГЛАВНУЮ СТРАНИЦУ","GO BACK TO THE HOMEPAGE"
+Settings,themes-site,Настройки,Settings
+"Sign In",themes-site,Авторизация,"Sign In"
+"Sign Out",themes-site,Выйти,"Sign Out"
+"Sign Up",themes-site,Регистрация,"Sign Up"
+"Toggle navigation",themes-site,"Показать/Скрыть меню","Toggle navigation"
+Backend,themes-site,Админка,Backend
+Feedback,themes-site,"Обратная связь",
+IMAGE_MESSAGE_FILE_TYPES,image,"Допустимы файлы только следующих форматов: ","Permissible only files of types: "
+BACKEND_INDEX_TITLE,translations,Переводы,"Translations list"
+BACKEND_INDEX_SUBTITLE,translations,"Список переводов","Translations list"
+BACKEND_CREATE_TITLE,translations,Переводы,Translations
+BACKEND_CREATE_SUBTITLE,translations,"Создать перевод","Translation create"
+BACKEND_UPDATE_TITLE,translations,Переводы,Translations
+BACKEND_UPDATE_SUBTITLE,translations,"Обновить перевод","Translation update"
+BACKEND_CANCEL_BTN_TITLE,translations,Отмена,Cancel
+BACKEND_CREATE_SUBMIT,translations,Сохранить,Save
+BACKEND_UPDATE_SUBMIT,translations,Обновить,Update
+ATTR_TOKEN,users,"Ключ безопастности","Secure token"
+ATTR_CREATED,users,"Дата добавления","Created at"
+ATTR_EMAIL,users,E-mail,E-mail
+ATTR_NAME,users,Имя,Name
+ATTR_NEW_EMAIL,users,"Новый e-mail","New e-mail"
+ATTR_NEW_PASSWORD,users,"Новый пароль","New password"
+ATTR_NEW_REPASSWORD,users,"Повторите новый пароль","Repeat new password"
+ATTR_OLDEMAIL,users,"Текущий e-mail","Current e-mail"
+ATTR_OLDPASSWORD,users,"Текущий пароль","Current password"
+ATTR_PASSWORD,users,Пароль,Password
+ATTR_REMEMBER_ME,users,"Запонить меня","Remember me"
+ATTR_REPASSWORD,users,"Повторите пароль","Repeat password"
+ATTR_ROLE,users,Роль,Role
+ATTR_STATUS,users,Статус,Status
+ATTR_SURNAME,users,Фамилия,Surname
+ATTR_UPDATED,users,"Дата обновления","Updated at"
+ATTR_USERNAME,users,Логин,Username
+BACKEND_CREATE_SUBMIT,users,Сохранить,Save
+BACKEND_CREATE_SUBTITLE,users,"Создание пользователя","User creating"
+BACKEND_CREATE_TITLE,users,Пользователи,Users
+BACKEND_FLASH_FAIL_ADMIN_CREATE,users,"В момент создания нового пользователя возникла ошибка.","User has not been saved. Please try again!"
+BACKEND_INDEX_SUBTITLE,users,"Список пользователей","Users list"
+BACKEND_INDEX_TITLE,users,Пользователи,Users
+BACKEND_LOGIN_RECOVERY,users,"Восстановить пароль","Recover password"
+BACKEND_LOGIN_SUBMIT,users,Войти,"Sign In"
+BACKEND_LOGIN_TITLE,users,Авторизация,"Sign In"
+BACKEND_PROMPT_ROLE,users,"Выберите роль","Select role"
+BACKEND_PROMPT_STATUS,users,"Выберите статус","Select status"
+BACKEND_UPDATE_SUBMIT,users,Обновить,Update
+BACKEND_UPDATE_SUBTITLE,users,"Обновление пользователя","User updating"
+BACKEND_UPDATE_TITLE,users,Пользователи,Users
+EMAIL_SUBJECT_CHANGE,users,"Код подтверждения новой электронной почты.","Email confirmation token"
+EMAIL_SUBJECT_RECOVERY,users,"Код восстановления пароля.","Your password reset request"
+EMAIL_SUBJECT_SIGNUP,users,"Код подтверждения новой учётной записи.","Email confirmation token"
+ERROR_MSG_INVALID_OLD_PASSWORD,users,"Неправильный текущий пароль","Invalid current password"
+ERROR_MSG_INVALID_EMAIL_OR_PASSWORD,users,"Неправильная почта или пароль","Invalid e-mail or password"
+FRONTEND_EMAIL_CHANGE_SUBMIT,users,Изменить,Change
+FRONTEND_EMAIL_CHANGE_TITLE,users,"Изменение адреса электронной почты","Change e-mail address"
+FRONTEND_FLASH_FAIL_ACTIVATION,users,"Неверный код активации или возмоможно аккаунт был уже ранее активирован.","User has not been activated. Please try again!"
+FRONTEND_FLASH_FAIL_EMAIL_CHANGE,users,"В момент изменения электронного адреса возникла ошибка. Попробуйте ещё раз пожалуйста!","Email has not been changed. Please try again!"
+FRONTEND_FLASH_FAIL_NEW_EMAIL_CONFIRMATION,users,"В момент подтверждения нового электронного адреса возникла ошибка. Попробуйте ещё раз пожалуйста!","Email has not been confirmed. Please try again!"
+FRONTEND_FLASH_FAIL_NEW_EMAIL_CONFIRMATION_WITH_INVALID_KEY,users,"Неверный код подтверждения.","Invalid request token."
+FRONTEND_FLASH_FAIL_PASSWORD_CHANGE,users,"В момент изменения пароля возникла ошибка. Попробуйте ещё раз пожалуйста!","Password has not been changed. Please try again!"
+FRONTEND_FLASH_FAIL_RECOVERY,users,"В момент отправки письма возникла ошибка. Попробуйте ещё раз пожалуйста!","Password recovery failed. Please try again!"
+FRONTEND_FLASH_FAIL_RECOVERY_CONFIRMATION,users,"В момент подтверждения нового пароля возникла ошибка. Попробуйте ещё раз пожалуйста!","Password recovery failed. Please try again!"
+FRONTEND_FLASH_FAIL_RECOVERY_CONFIRMATION_WITH_INVALID_KEY,users,"Неверный код подтверждения.","Invalid request token."
+FRONTEND_FLASH_FAIL_RESEND,users,"В момент отправки письма возникла ошибка. Попробуйте ещё раз пожалуйста!","Resend email confirmation failed. Please try again!"
+FRONTEND_FLASH_FAIL_SIGNUP,users,"В момент регистрации возникла ошибка. Попробуйте ещё раз пожалуйста!","User sign up failed. Please try again!"
+FRONTEND_FLASH_FAIL_UPDATE,users,"В момент обноеления профиля возникла ошибка. Попробуйте ещё раз пожалуйста!","Profile update failed. Please try again!"
+FRONTEND_FLASH_SUCCESS_ACTIVATION,users,"Ваша учётная запись была успешно активирована.","Your Account has been successfully activated. You can now log in using the email and password you chose during the registration."
+FRONTEND_FLASH_SUCCESS_NEW_EMAIL_CONFIRMATION,users,"E-mail адрес был успешно обновлён!","Your email has been successfully confirmed."
+FRONTEND_FLASH_SUCCESS_PASSWORD_CHANGE,users,"Пароль был успешно обновлён!","Your password has been successfully changed."
+FRONTEND_FLASH_SUCCESS_RECOVERY,users,"На указанный вами электронный адрес было отправлено письмо с кодом восстановления пароля.","A verification link has been sent to the email address you entered."
+FRONTEND_FLASH_SUCCESS_RECOVERY_CONFIRMATION,users,"Пароль был успешно восстановлен.","Reset password successful. You may now login to the site."
+FRONTEND_FLASH_SUCCESS_RESEND,users,"На указанный электронный адрес было отправлено письмо с кодом активации новой учётной записи.","A verification link has been sent to the email address you entered."
+FRONTEND_FLASH_SUCCESS_SIGNUP_WITHOUT_LOGIN,users,"Учётная запись была успешно создана. Через несколько секунд вам на почту будет отправлен код для активации аккаунта. В случае если письмо не пришло в течении 15 минут, вы можете заново запросить отправку ключа по данной <a href=""{url}"">ссылке</a>.","Your account has been created and a verification link has been sent to the email address you entered."
+FRONTEND_FLASH_SUCCESS_SIGNUP_WITH_LOGIN,users,"Учётная запись была успешно создана.","Your account has been created."
+FRONTEND_FLASH_SUCCES_EMAIL_CHANGE,users,"На указанный новый электронный адрес было отправлено письмо с кодом подтверждения.","Your email address has been successfully changed."
+FRONTEND_FLASH_SUCCES_UPDATE,users,"Профиль был успешно обновлён.","Your account has been successfully updated."
+FRONTEND_INDEX_SUBTITLE,users,"Список пользователей","Users list"
+FRONTEND_INDEX_TITLE,users,Пользователи,Users
+FRONTEND_LOGIN_OR,users,или,or
+FRONTEND_LOGIN_RECOVERY,users,"Восстановить пароль","Recover password"
+FRONTEND_LOGIN_SUBMIT,users,Войти,"Sign In"
+FRONTEND_LOGIN_TITLE,users,Авторизация,"Sign In"
+FRONTEND_PASSWORD_CHANGE_SUBMIT,users,Изменить,Change
+FRONTEND_PASSWORD_CHANGE_TITLE,users,"Смена пароля","Change password"
+FRONTEND_RECOVERY_CONFIRMATION_SUBMIT,users,Сохранить,Save
+FRONTEND_RECOVERY_CONFIRMATION_TITLE,users,"Восстановление пароля","Password recovery"
+FRONTEND_RECOVERY_SUBMIT,users,Восстановить,Recover
+FRONTEND_RECOVERY_TITLE,users,"Восстановления пароля","Password recovery"
+FRONTEND_RESEND_SUBMIT,users,Отправить,Resend
+FRONTEND_RESEND_TITLE,users,"Повторная отправка e-mail подтверждения","Resend e-mail confirmation"
+FRONTEND_SETTINGS_LABEL,users,Настройки,Settings
+FRONTEND_SIGNUP_RESEND,users,"Повторная отправка e-mail подтверждения","Resend e-mail confirmation"
+FRONTEND_SIGNUP_SUBMIT,users,Зарегистрироватся,"Sign Up"
+FRONTEND_SIGNUP_TITLE,users,Регистрация,"Sign Up"
+FRONTEND_UPDATE_SUBMIT,users,Обновить,Update
+FRONTEND_UPDATE_TITLE,users,"Редактирование профиля","Update user profile"
+STATUS_ACTIVE,users,Активный,Active
+STATUS_BANNED,users,Забаненый,Banned
+STATUS_INACTIVE,users,Неактивный,Inactive
+ATTR_CITY_NAME,users,Город,City
+ATTR_COUNTRY,users,Страна,Country
+FRONTEND_SIGNUP_INPUT_SELF_PASSWORD,users,"Ввести пароль самостоятельно",
+BACKEND_INDEX_TITLE,lang,Языки,"Language list"
+BACKEND_INDEX_SUBTITLE,lang,"Список языков","Language list"
+BACKEND_CREATE_TITLE,lang,Языки,Lang
+BACKEND_CREATE_SUBTITLE,lang,"Создание языка","Lang create"
+BACKEND_UPDATE_TITLE,lang,Языки,Lang
+BACKEND_UPDATE_SUBTITLE,lang,"Обновление языка","Lang update"
+BACKEND_CANCEL_BTN_TITLE,lang,Отмена,Cancel
+BACKEND_CREATE_SUBMIT,lang,Сохранить,Save
+BACKEND_UPDATE_SUBMIT,lang,Обновить,Update
+BACKEND_INDEX_TITLE,page,"Текстовые страницы","Text pages"
+BACKEND_INDEX_SUBTITLE,page,"Текстовые страницы",Pages
+BACKEND_CREATE_TITLE,page,,"Text page"
+BACKEND_CREATE_SUBTITLE,page,,Create
+BACKEND_UPDATE_TITLE,page,"Текстовые страницы","Text page"
+BACKEND_UPDATE_SUBTITLE,page,pages,Edit
+BACKEND_UPDATE_CREATE,page,Создать,Create
+BACKEND_UPDATE_SUBMIT,page,Обновить,Update
+BACKEND_PERMISSIONS_ATTR_RULE_NAME,rbac,Правило,"Rule name"
+BACKEND_ROLES_ATTR_RULE_NAME,rbac,Правило,"Rule name"
+BACKEND_ROLES_CREATE_SUBMIT,rbac,Сохранить,Save
+BACKEND_ROLES_CREATE_SUBTITLE,rbac,"Добавление роли","Role creating"
+BACKEND_ROLES_CREATE_TITLE,rbac,"Управление доступом","Access Control"
+BACKEND_ROLES_FLASH_FAIL_ADMIN_CREATE,rbac,"Не удалось сохранить роль. Попробуйте пожалуйста еще раз!","Role has not been saved. Please try again!"
+BACKEND_ROLES_FLASH_FAIL_ADMIN_DELETE,rbac,"Не удалось удалить роль. Попробуйте пожалуйста еще раз!","Role has not been deleted. Please try again!"
+BACKEND_ROLES_FLASH_FAIL_ADMIN_UPDATE,rbac,"Не удалось обновить роль. Попробуйте пожалуйста еще раз!","Role has not been updated. Please try again!"
+BACKEND_ROLES_INDEX_SUBTITLE,rbac,"Список ролей","Roles list"
+BACKEND_ROLES_INDEX_TITLE,rbac,"Управление доступом","Access Control"
+BACKEND_ROLES_NOT_FOUND,rbac,"Ошибка 404 - страница не найдена!","Error 404 - page not found!"
+BACKEND_ROLES_PERMISSIONS_PROMPT,rbac,"Выберите права","Choose children permissions"
+BACKEND_ROLES_ROLES_PROMPT,rbac,"Выберите роли","Choose children roles"
+BACKEND_ROLES_RULE_NAME_PROMPT,rbac,"Выберите правило","Choose a rule"
+BACKEND_ROLES_UPDATE_SUBMIT,rbac,Обновить,Update
+BACKEND_ROLES_UPDATE_SUBTITLE,rbac,"Обновление роли","Role updating"
+BACKEND_ROLES_UPDATE_TITLE,rbac,"Управление доступом","Access Control"
+BACKEND_RULES_ATTR_NAME,rbac,Название,Name
+BACKEND_RULES_ATTR_NAMESPACE,rbac,"Простраство имен",Namespace
+BACKEND_RULES_CREATE_SUBMIT,rbac,Сохранить,Save
+BACKEND_RULES_CREATE_SUBTITLE,rbac,"Создание правила","Rule creating"
+BACKEND_RULES_CREATE_TITLE,rbac,"Управление доступом","Access Control"
+BACKEND_RULES_FLASH_FAIL_ADMIN_CREATE,rbac,"Не удалось сохранить правило. Попробуйте пожалуйста еще раз!","Rule has not been saved. Please try again!"
+BACKEND_RULES_FLASH_FAIL_ADMIN_DELETE,rbac,"Не удалось удалить правило. Попробуйте пожалуйста еще раз!","Rule has not been deleted. Please try again!"
+BACKEND_RULES_INDEX_SUBTITLE,rbac,"Список правил","Rules list"
+BACKEND_RULES_INDEX_TITLE,rbac,"Управление дсотупом","Access Control"
+BACKEND_RULES_NOT_FOUND,rbac,"Ошибка 404 - страница не найдена!","Error 404 - page not found!"
+ERROR_MSG_INVALID_CHILDREN,rbac,"Неверный список потомков","Invalid children"
+ERROR_MSG_INVALID_NAMESPACE,rbac,"неверное простраство имен","Invalid namespace"
+ERROR_MSG_INVALID_PERMISSIONS_CHILDREN,rbac,"Неверный список потомстенных прав","Invalid permissions children"
+ERROR_MSG_INVALID_ROLES_CHILDREN,rbac,"Неверный список потомстенных ролей","Invalid roles permissions"
+ERROR_MSG_INVALID_RULE_NAME,rbac,"Название роли","Invalid rule name"
+BACKEND_PERMISSIONS_ATTR_CHILDREN,rbac,Потомки,"Children permissions"
+BACKEND_PERMISSIONS_ATTR_DATA,rbac,Дата,Data
+BACKEND_PERMISSIONS_ATTR_DESCRIPTION,rbac,Описание,Description
+BACKEND_PERMISSIONS_ATTR_NAME,rbac,Название,Name
+BACKEND_PERMISSIONS_CHILDREN_PROMPT,rbac,"Выберите потомков","Choose children"
+BACKEND_PERMISSIONS_CREATE_SUBMIT,rbac,Сохранить,Save
+BACKEND_PERMISSIONS_CREATE_SUBTITLE,rbac,"Добавление правила","Permission creating"
+BACKEND_PERMISSIONS_CREATE_TITLE,rbac,"Управление доступом","Access Control"
+BACKEND_PERMISSIONS_FLASH_FAIL_ADMIN_CREATE,rbac,"Не удалось сохранить правило. Попробуйте пожалуйста еще раз!","Permission has not been saved. Please try again!"
+BACKEND_PERMISSIONS_FLASH_FAIL_ADMIN_DELETE,rbac,"Не удалось удалить правило. Попробуйте пожалуйста еще раз!","Permission has not been deleted. Please try again!"
+BACKEND_PERMISSIONS_FLASH_FAIL_ADMIN_UPDATE,rbac,"Не удалось обновить правило. Попробуйте пожалуйста еще раз!","Permission has not been updated. Please try again!"
+BACKEND_PERMISSIONS_INDEX_SUBTITLE,rbac,"Список правил","Permissions list"
+BACKEND_PERMISSIONS_INDEX_TITLE,rbac,"Управление доступом","Access Control"
+BACKEND_PERMISSIONS_NOT_FOUND,rbac,"Ошибка 404 - страница не найдена!","Error 404 - page not found!"
+BACKEND_PERMISSIONS_RULE_NAME_PROMPT,rbac,"Выберите роль","Choose a rule"
+BACKEND_PERMISSIONS_UPDATE_SUBMIT,rbac,Обновить,Update
+BACKEND_PERMISSIONS_UPDATE_SUBTITLE,rbac,"Обновление правила","Permission updating"
+BACKEND_PERMISSIONS_UPDATE_TITLE,rbac,"Уплавление доступа","Access Control"
+BACKEND_ROLES_ATTR_DATA,rbac,Дата,Data
+BACKEND_ROLES_ATTR_DESCRIPTION,rbac,Описание,Description
+BACKEND_ROLES_ATTR_NAME,rbac,Название,Name
+BACKEND_ROLES_ATTR_PERMISSIONS,rbac,"Потомственные права","Children permissions"
+BACKEND_ROLES_ATTR_ROLES,rbac,"Постомственные роли","Children roles"
+FEEDBACK_FORM_ATTR_BODY,site,Сообщение,Message
+FEEDBACK_FORM_ATTR_EMAIL,site,E-mail,E-mail
+FEEDBACK_FORM_ATTR_NAME,site,ФИО,"Full Name"
+FEEDBACK_FORM_ATTR_SUBJECT,site,Тема,Subject
+FEEDBACK_FORM_ATTR_VERIFY_CODE,site,"Код верификации","Verify Code"
+FEEDBACK_FLASH_SUCCESS_MSG,site,"Сообщение было успешно отправлено. Спасибо!","Message was successfully sent. Thank you!"
+FEEDBACK_FORM_INFO,site,"Если у вас есть вопросы или пожелания, вы можете написать нам сообщение. Спасибо!","If you have questions or deals you can write us a message. Thanks!"
+FEEDBACK_SUBMIT_BTN,site,Отправить,Send
+FEEDBACK_TITLE,site,Контакты,Contacts

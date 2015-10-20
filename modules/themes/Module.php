@@ -16,7 +16,8 @@ class Module extends \yii\base\Module {
     }
 
     public static function  initLang(){
-        $langNames = ['themes-site', 'themes-admin'];
+        $langNames = ['themes-admin', 'Horizontal menu ALL pages', 'Homepage', 'Login form for ALL pages', 'ALL_INTERFACES', 'GUEST_INTERFACE', 'CUSTOMER_INTERFACE', 'PERFORMER_INTERFACE',
+        'FORM_ORDER', 'FORM_PERFORMER_SETTINGS', 'FORM_CUSTOMER_SETTINGS'];
         $app = \Yii::$app;
         foreach($langNames as $langName){
             if (!isset($app->i18n->translations[$langName])) {

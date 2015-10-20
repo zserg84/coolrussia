@@ -2,42 +2,46 @@
 
 namespace modules\users\models;
 
+use common\models\Company;
+use common\models\UserHasCompany;
+use modules\contract\models\Contract;
 use modules\image\models\Image;
 use modules\lang\models\Lang;
 use modules\users\helpers\Security;
 use modules\users\Module;
 use modules\users\traits\ModuleTrait;
-use modules\geo\models\GeoCity;
 use yii\behaviors\TimestampBehavior;
 use yii\db\ActiveRecord;
 use yii\helpers\Url;
 use yii\web\IdentityInterface;
+use modules\contract\Module as ContractModule;
 use Yii;
 
 /**
- * Class User
- * @package modules\users\models
- * User model.
+ * This is the model class for table "user".
  *
- * @property integer $id ID
- * @property string $name Name
- * @property string $email E-mail
- * @property string $password_hash Password hash
- * @property string $auth_key Authentication key
- * @property string $role Role
- * @property integer $city_id
+ * @property integer $id
+ * @property string $login
+ * @property string $name
+ * @property string $email
+ * @property string $password_hash
+ * @property string $auth_key
+ * @property string $token
+ * @property string $role
+ * @property integer $status_id
+ * @property integer $created_at
+ * @property integer $updated_at
  * @property string $birthday
  * @property double $rate
- * @property integer $status_id Status
- * @property integer $created_at Created time
- * @property integer $updated_at Updated time
+ * @property integer $image_id
  *
- * @property Profile[] $profiles
- * @property Profile $profile
- * @property GeoCity $city
+ * @property Contract[] $customerContracts
+ * @property Contract[] $performerContracts
  * @property Image $image
- *
+ * @property UserHasCompany[] $userHasCompanies
+ * @property Company[] $companies
  */
+
 class User extends ActiveRecord implements IdentityInterface
 {
     use ModuleTrait;
@@ -56,12 +60,51 @@ class User extends ActiveRecord implements IdentityInterface
      */
     const ROLE_DEFAULT = 'user';
 
+    const DEFAULT_COVER_SRC = '';
     /**
      * @inheritdoc
      */
     public static function tableName()
     {
-        return '{{%users}}';
+        return '{{%user}}';
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getCustomerContracts()
+    {
+        return $this->hasMany(Contract::className(), ['customer_id' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getPerformerContracts()
+    {
+        $contracts = [];
+        if($this->userHasCompanies){
+            $uhs = $this->userHasCompanies[0];
+            $company = $uhs->company;
+            $contracts = $company->contracts;
+        }
+        return $contracts;
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getUserHasCompanies()
+    {
+        return $this->hasMany(UserHasCompany::className(), ['user_id' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getCompanies()
+    {
+        return $this->hasMany(Company::className(), ['id' => 'company_id'])->viaTable('user_has_company', ['user_id' => 'id']);
     }
 
     /**
@@ -77,7 +120,8 @@ class User extends ActiveRecord implements IdentityInterface
      */
     public static function findIdentityByAccessToken($token, $type = null)
     {
-        throw new NotSupportedException('"findIdentityByAccessToken" is not implemented.');
+        return static::find(['token'=>$token])->one();
+//        throw new NotSupportedException('"findIdentityByAccessToken" is not implemented.');
     }
 
     /**
@@ -122,6 +166,21 @@ class User extends ActiveRecord implements IdentityInterface
     public static function findByEmail($email, $scope = null)
     {
         $query = static::find()->where(['email' => $email]);
+        if ($scope !== null) {
+            if (is_array($scope)) {
+                foreach ($scope as $value) {
+                    $query->$value();
+                }
+            } else {
+                $query->$scope();
+            }
+        }
+        return $query->one();
+    }
+
+    public static function findByLogin($login, $scope = null)
+    {
+        $query = static::find()->where(['login' => $login]);
         if ($scope !== null) {
             if (is_array($scope)) {
                 foreach ($scope as $value) {
@@ -242,8 +301,8 @@ class User extends ActiveRecord implements IdentityInterface
     public function rules()
     {
         return [
-            [['name', 'email', 'password_hash', 'auth_key', 'token', 'created_at', 'updated_at'], 'required'],
-            [['status_id', 'created_at', 'updated_at', 'city_id'], 'integer'],
+            [['email', 'password_hash', 'auth_key', 'token', 'created_at', 'updated_at'], 'required'],
+            [['status_id', 'created_at', 'updated_at'], 'integer'],
             [['birthday'], 'safe'],
             [['rate'], 'number'],
             [['name', 'email'], 'string', 'max' => 100],
@@ -262,12 +321,11 @@ class User extends ActiveRecord implements IdentityInterface
     {
         return [
             'name' => Module::t('users', 'ATTR_NAME'),
-            'email' => Module::t('users', 'ATTR_EMAIL'),
+            'email' => ContractModule::t('REGISTRATION_FORM_PERFORMER', 'EMAIL_PERFORMER_REG_FORM'),
             'role' => Module::t('users', 'ATTR_ROLE'),
             'status_id' => Module::t('users', 'ATTR_STATUS'),
-            'created_at' => Module::t('users', 'ATTR_CREATED'),
+            'created_at' => ContractModule::t('REGISTRATION_FORM_PERFORMER', 'DATE_OF_REGISTRATION_PERFORMER_REG_FORM'),
             'updated_at' => Module::t('users', 'ATTR_UPDATED'),
-            'city_id' => Module::t('users', 'ATTR_CITY'),
             'birthday' => Module::t('users', 'ATTR_BIRTHDAY'),
             'rate' => Module::t('users', 'ATTR_RATE'),
         ];
@@ -312,50 +370,10 @@ class User extends ActiveRecord implements IdentityInterface
 
     public function afterSave($insert, $changedAttributes){
         if (parent::afterSave($insert, $changedAttributes)) {
-            if($insert){
-                $profile = new Profile();
-                $profile->user_id = $this->id;
-                $profile->lang_id = Lang::getCurrent()->id;
-                $profile->name = $this->name;
-                $profile->save();
-            }
 
             return true;
         }
         return false;
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getProfiles()
-    {
-        return $this->hasMany(Profile::className(), ['user_id' => 'id']);
-    }
-
-    /**
-     * @param int|null $langId
-     * @return array|null|ActiveRecord
-     */
-    public function getProfile($langId=null)
-    {
-        $userId = $this->id ?: Yii::$app->getUser()->getId();
-        $where = ['user_id'=>$userId];
-        $where['lang_id'] = (!is_null($langId)) ? $langId : Lang::getCurrent()->id;
-        if (!$profile = Profile::find()->where($where)->one()) {
-            $where['lang_id'] = Lang::getDefaultLang()->id;
-            $profile = Profile::find()->where($where)->one();
-        }
-        return $profile;
-    }
-
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getCity()
-    {
-        return $this->hasOne(GeoCity::className(), ['id' => 'city_id']);
     }
 
     /**
@@ -431,15 +449,21 @@ class User extends ActiveRecord implements IdentityInterface
         return $this->save(false);
     }
 
-    public function getName(){
-        $profile = $this->getProfile();
-        return $profile ? $profile->name : $this->name;
-    }
-
 
     public function getViewUrl() {
         if (!$this->id) return false;
         return Url::toRoute(['/users/default/view', 'id'=>$this->id]);
     }
 
+    public function getLogo($w=null) {
+        if ($this->image_id) {
+            return $this->image->getSrc($w);
+        }
+        return self::DEFAULT_COVER_SRC;
+    }
+
+    public static function getCurrentUser(){
+        $userId = Yii::$app->getUser()->getId();
+        return self::findOne($userId);
+    }
 }

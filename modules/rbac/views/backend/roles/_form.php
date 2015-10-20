@@ -12,8 +12,8 @@
  * @var array $permissionArray Permissions array
  */
 
-use modules\blog\Module;
-use modules\select2\Widget;
+use modules\rbac\Module;
+use vova07\select2\Widget;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 

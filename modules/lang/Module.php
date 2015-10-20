@@ -2,8 +2,6 @@
 
 namespace modules\lang;
 
-use modules\translations\components\DbMessageSource;
-
 class Module extends \modules\base\components\Module
 {
 

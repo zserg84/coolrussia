@@ -4,13 +4,13 @@
  * Blog update view.
  *
  * @var yii\base\View $this View
- * @var modules\blog\models\backend\Blog $model Model
+ * @var modules\lang\models\Lang $model Model
  * @var \modules\themes\admin\widgets\Box $box Box widget instance
  * @var array $statusArray Statuses array
  */
 
 use modules\themes\admin\widgets\Box;
-use modules\blog\Module;
+use modules\lang\Module;
 
 $this->title = Module::t('lang', 'BACKEND_UPDATE_TITLE');
 $this->params['subtitle'] = Module::t('lang', 'BACKEND_UPDATE_SUBTITLE');

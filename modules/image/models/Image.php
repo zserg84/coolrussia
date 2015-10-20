@@ -17,6 +17,8 @@ use yii\helpers\VarDumper;
  * @property integer $sort
  *
  * @property Users[] $users
+ * @property Company[] $companies
+ * @property CompanyImage[] $companyImages
  */
 class Image extends \yii\db\ActiveRecord
 {
@@ -81,17 +83,33 @@ class Image extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
+    public function getCompanies()
+    {
+        return $this->hasMany(Company::className(), ['logo_image_id' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getCompanyImages()
+    {
+        return $this->hasMany(CompanyImage::className(), ['image_id' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
     public function getUsers()
     {
         return $this->hasMany(User::className(), ['image_id' => 'id']);
     }
 
 
-    public function beforeSave() {
+    public function beforeSave($insert) {
         if (!$this->id) {
             $this->create_time = time();
         }
-        return parent::beforeSave(true);
+        return parent::beforeSave($insert);
     }
 
 

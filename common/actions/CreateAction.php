@@ -22,16 +22,15 @@ class CreateAction extends Action {
 
         $model = $this->getModel();
 
+        if($beforeAction = $this->beforeAction){
+            $model = call_user_func($beforeAction, $this, $model);
+        }
+
         if($post = \Yii::$app->getRequest()->post()){
             $this->loadData($model, $post);
-
             if (Yii::$app->request->isAjax and $this->ajaxValidation) {
                 Yii::$app->response->format = Response::FORMAT_JSON;
                 return ActiveForm::validate($model);
-            }
-
-            if($beforeAction = $this->beforeAction){
-                $model = call_user_func($beforeAction, $model);
             }
 
             if($model->save()){

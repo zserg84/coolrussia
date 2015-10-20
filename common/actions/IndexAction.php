@@ -38,6 +38,10 @@ class IndexAction extends Action {
     public $prepareDataProvider;
 
     public function run(){
+        if($beforeAction = $this->beforeAction){
+            call_user_func($beforeAction, $this);
+        }
+
         $this->_searchModel = new $this->modelClass();
         $dataProvider = $this->prepareDataProvider();
 

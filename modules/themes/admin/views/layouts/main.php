@@ -47,7 +47,7 @@ use modules\themes\Module;
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <i class="glyphicon glyphicon-user"></i>
-                                <span><?= Yii::$app->user->identity->getName()?> <i class="caret"></i></span>
+                                <span><?= Yii::$app->user->identity->name?> <i class="caret"></i></span>
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- Menu Footer-->
